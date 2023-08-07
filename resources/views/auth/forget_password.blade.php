@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ $title }} - HexaDash</title>
+    <title>{{ $title }} - Localshop</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/plugin.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
@@ -20,25 +20,25 @@
                     <div class="col-xxl-3 col-xl-4 col-md-6 col-sm-8">
                         <div class="edit-profile">
                             <div class="edit-profile__logos">
-                                <img class="dark" src="{{ asset('assets/img/logo-dark.png') }}" alt="">
-                                <img class="light" src="{{ asset('assets/img/logo-white.png') }}" alt="">
+                            <img class="dark" src="{{ asset('assets/img/mls/logotype3-dark.png') }}" alt="">
+                                <img class="light" src="{{ asset('assets/img/mls/logotype3-white.png') }}" alt="">
                             </div>
                             <div class="card border-0">
                                 <div class="card-header">
                                     <div class="edit-profile__title">
-                                        <h6>Forgot Password?</h6>
+                                        <h6>¿Olvidaste tu contraseña?</h6>
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="edit-profile__body">
-                                        <p>Enter the email address you used when you joined and we’ll send you instructions to reset your password.</p>
+                                        <p>Ingrese la dirección de correo electrónico que utilizó cuando se unió y le enviaremos instrucciones para restablecer su contraseña.</p>
                                         <div class="form-group mb-20">
-                                            <label for="email">Email Adress</label>
-                                            <input type="text" class="form-control" id="email" placeholder="name@example.com">
+                                            <label for="email">Correo electrónico</label>
+                                            <input type="text" class="form-control" id="email" placeholder="correo@dominio.com">
                                         </div>
                                         <div class="d-flex">
                                             <button class="btn btn-primary btn-default btn-squared text-capitalize lh-normal px-md-50 py-15 signIn-createBtn">
-                                                Send Reset Instructions
+                                               Recibir instrucciones
                                             </button>
                                         </div>
                                     </div>

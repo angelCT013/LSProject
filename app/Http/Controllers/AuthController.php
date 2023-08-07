@@ -8,7 +8,7 @@ use Auth;
 use App\Models\User;
 
 class AuthController extends Controller {
-    
+
     /**
      * Display login of the resource.
      *
@@ -26,7 +26,7 @@ class AuthController extends Controller {
      * @return \Illuminate\View\View
      */
     public function register(){
-        $title = "Register";
+        $title = "Registro";
         $description = "Some description for the page";
         return view('auth.register',compact('title','description'));
     }
@@ -37,7 +37,7 @@ class AuthController extends Controller {
      * @return \Illuminate\View\View
      */
     public function forgetPassword(){
-        $title = "Forget Password";
+        $title = "Olvide mi contraseña";
         $description = "Some description for the page";
         return view('auth.forget_password',compact('title','description'));
     }
@@ -45,7 +45,7 @@ class AuthController extends Controller {
     /**
      * make the user able to register
      *
-     * @return 
+     * @return
      */
     public function signup(Request $request){
         $validators=Validator::make($request->all(),[
@@ -62,14 +62,14 @@ class AuthController extends Controller {
             $user->password = bcrypt($request->password);
             $user->save();
             auth()->login($user);
-            return redirect()->intended(route('dashboard.demo_one','en'))->with('message','Registration was successfull !');            
+            return redirect()->intended(route('dashboard.demo_one','en'))->with('message','Registration was successfull !');
         }
     }
 
     /**
      * make the user able to login
      *
-     * @return 
+     * @return
      */
     public function authenticate(Request $request){
         $validators=Validator::make($request->all(),[
@@ -90,10 +90,10 @@ class AuthController extends Controller {
     /**
      * make the user able to logout
      *
-     * @return 
+     * @return
      */
-    public function logout(){  
-        Auth::logout(); 
-        return redirect()->route('login')->with('message','Successfully Logged out !');       
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('login')->with('message','Successfully Logged out !');
     }
 }
