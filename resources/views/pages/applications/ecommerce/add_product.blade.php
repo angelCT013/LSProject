@@ -7,7 +7,7 @@
         <div class="col-lg-12">
             <div class="shop-breadcrumb">
                 <div class="breadcrumb-main">
-                    <h4 class="text-capitalize breadcrumb-title">{{ trans('menu.ecommerce-product-add') }}</h4>
+                    <h4 class="text-capitalize breadcrumb-title">{{ trans('menu.ecommerce-menu-title') }}</h4>
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -31,22 +31,22 @@
                             <div class="card add-product p-sm-30 p-20 mb-30">
                                 <div class="card-body p-0">
                                     <div class="card-header">
-                                        <h6 class="fw-500">About Product</h6>
+                                        <h6 class="fw-500">Información sobre el producto</h6>
                                     </div>
                                     <div class="add-product__body px-sm-40 px-20">
                                         <form>
                                             <div class="form-group">
-                                                <label for="name1">product name</label>
+                                                <label for="name1">Nombre del producto</label>
                                                 <input type="text" class="form-control" id="name1" placeholder="red chair">
                                             </div>
                                             <div class="form-group">
-                                                <label for="name2">sub text</label>
+                                                <label for="name2">sub titulo</label>
                                                 <input type="text" class="form-control" id="name2" placeholder="sub heading">
                                             </div>
                                             <div class="form-group">
                                                 <div class="countryOption">
                                                     <label for="countryOption">
-                                                        category
+                                                        categoria
                                                     </label>
                                                     <select class="js-example-basic-single js-states form-control" id="countryOption">
                                                         <option value="JAN">event</option>
@@ -55,7 +55,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group quantity-appearance">
-                                                <label>price</label>
+                                                <label>Precio</label>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon1">
@@ -68,7 +68,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group quantity-appearance">
-                                                <label>Discount</label>
+                                                <label>Descuento</label>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon2">
@@ -81,27 +81,27 @@
                                                 </div>
                                             </div>
                                             <div class="form-group status-radio add-product-status-radio mb-20">
-                                                <label class="mb-15">status</label>
+                                                <label class="mb-15">estado</label>
                                                 <div class="d-flex">
                                                     <div class="radio-horizontal-list d-flex flex-wrap">
                                                         <div class="radio-theme-default custom-radio ">
                                                             <input class="radio" type="radio" name="radio-optional" value=0 id="radio-hl1">
                                                             <label for="radio-hl1">
-                                                                <span class="radio-text">Published</span>
+                                                                <span class="radio-text">Publicado</span>
                                                             </label>
                                                         </div>
                                                         <div class="radio-theme-default custom-radio ">
                                                             <input class="radio" type="radio" name="radio-optional" value=0 id="radio-hl2">
                                                             <label for="radio-hl2">
-                                                                <span class="radio-text">draft</span>
+                                                                <span class="radio-text">Desactivado</span>
                                                             </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleFormControlTextarea1">Product Description</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="loram ipsum dolor sit amit"></textarea>
+                                                <label for="exampleFormControlTextarea1">Description</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe una descripcion del producto"></textarea>
                                             </div>
                                             <div class="form-group">
                                                 <label for="name8">Meta Title</label>
@@ -118,7 +118,7 @@
                             <div class="card add-product p-sm-30 p-20 ">
                                 <div class="card-body p-0">
                                     <div class="card-header">
-                                        <h6 class="fw-500">Product image</h6>
+                                        <h6 class="fw-500">Imagen del producto</h6>
                                     </div>
                                     <div class="add-product__body-img px-sm-40 px-20">
                                         <label for="upload" class="file-upload__label">
@@ -127,9 +127,8 @@
                                                     <img class="svg" src="{{ asset('assets/img/svg/upload.svg') }}" alt="">
                                                     <input id="upload" class="file-upload__input" type="file" name="file-upload">
                                                 </span>
-                                                <span class="pera">Drag and drop an image</span>
-                                                <span>or <a href="#" class="color-secondary">Browse</a> to choose a
-                                                    file</span>
+                                                <span class="pera">Soltar una imagen o seleccionar</span>
+                                                <span>or <a href="#" class="color-secondary">Buscar</a> para escoger una imagen</span>
                                             </span>
                                         </label>
                                         <div class="upload-product-media d-flex justify-content-between align-items-center mt-25">
@@ -154,7 +153,7 @@
                             <div class="button-group add-product-btn d-flex justify-content-sm-end justify-content-center mt-40">
                                 <button class="btn btn-light btn-default btn-squared fw-400 text-capitalize">cancel
                                 </button>
-                                <button class="btn btn-primary btn-default btn-squared text-capitalize">save product
+                                <button class="btn btn-primary btn-default btn-squared text-capitalize">Guardar
                                 </button>
                             </div>
                         </div>

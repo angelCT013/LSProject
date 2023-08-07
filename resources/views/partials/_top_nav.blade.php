@@ -2,13 +2,13 @@
     <div class="navbar-left">
         <div class="logo-area">
             <a class="navbar-brand" href="{{ route('dashboard.demo_one',app()->getLocale()) }}">
-                <img class="dark" src="{{ asset('assets/img/logo-dark.svg') }}" alt="svg">
-                <img class="light" src="{{ asset('assets/img/logo-white.svg') }}" alt="img">
+            <img class="dark" src="{{ asset('assets/img/mls/logotype3-dark.png') }}" alt="">
+            <img class="light" src="{{ asset('assets/img/mls/logotype3-white.png') }}" alt="" heigth="">
             </a>
             <a href="#" class="sidebar-toggle">
                 <img class="svg" src="{{ asset('assets/img/svg/align-center-alt.svg') }}" alt="img"></a>
         </div>
-        
+
         <div class="top-menu">
             <div class="hexadash-top-menu position-relative">
                 <ul>
@@ -19,7 +19,7 @@
                             <span class="nav-icon uil uil-circle"></span>
                             <span class="menu-text">{{ trans('menu.blank-menu-title') }}</span>
                         </a>
-                    </li> 
+                    </li>
 =======
                     <li class="has-subMenu">
                         <a href="#" class="{{ Request::is(app()->getLocale().'/dashboards/*') ? 'active':'' }}">Dashboard</a>
