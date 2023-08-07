@@ -16,4 +16,9 @@ return [
         'en_name' => 'German',
         'is_rtl'  => false,
     ],
+    'es' => [
+        'name'    => 'Español',
+        'en_name' => 'spanish',
+        'is_rtl'  => true,
+    ],
 ];

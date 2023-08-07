@@ -12,8 +12,8 @@ class EcommerceController extends Controller {
      * @return \Illuminate\View\View
      */
     public function index(){
-        $title = "Ecommerce Products";
-        $description = "Some description for the page";
+        $title = "Productos";
+        $description = "Pagina de productos";
         return view('pages.applications.ecommerce.products',compact('title','description'));
     }
 
@@ -23,8 +23,8 @@ class EcommerceController extends Controller {
      * @return \Illuminate\View\View
      */
     public function productList(){
-        $title = "Ecommerce Product List";
-        $description = "Some description for the page";
+        $title = "Lista";
+        $description = "Descripcion de productos";
         return view('pages.applications.ecommerce.product_list',compact('title','description'));
     }
 
@@ -45,8 +45,8 @@ class EcommerceController extends Controller {
      * @return \Illuminate\View\View
      */
     public function addProduct(){
-        $title = "Ecommerce Add Product";
-        $description = "Some description for the page";
+        $title = "Alta Productos";
+        $description = "Agregar productos";
         return view('pages.applications.ecommerce.add_product',compact('title','description'));
     }
 
