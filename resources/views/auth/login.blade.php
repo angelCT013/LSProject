@@ -26,7 +26,7 @@
                             <div class="card border-0">
                                 <div class="card-header">
                                     <div class="edit-profile__title">
-                                        <h6>Sign in HexaDash2</h6>
+                                        <h6>LocalShop</h6>
                                     </div>
                                 </div>
                                 <div class="card-body">
