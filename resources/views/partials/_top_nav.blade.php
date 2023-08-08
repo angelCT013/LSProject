@@ -12,15 +12,6 @@
         <div class="top-menu">
             <div class="hexadash-top-menu position-relative">
                 <ul>
-<<<<<<< HEAD
-
-                    <li>
-                        <a href="{{ route('pages.blank',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/pages/blank') ? 'active':'' }}">
-                            <span class="nav-icon uil uil-circle"></span>
-                            <span class="menu-text">{{ trans('menu.blank-menu-title') }}</span>
-                        </a>
-                    </li>
-=======
                     <li class="has-subMenu">
                         <a href="#" class="{{ Request::is(app()->getLocale().'/dashboards/*') ? 'active':'' }}">Dashboard</a>
                         <ul class="subMenu">
@@ -432,22 +423,7 @@
                     <li class="mega-item has-subMenu">
                         <a href="#" class="{{ Request::is(app()->getLocale().'/ui/*') ? 'active':'' }}">Components</a>
                         <ul class="megaMenu-wrapper megaMenu-wide">
-                            <li>
-                                <span class="mega-title">Components</span>
-                                <ul>
-                                <li><a class="{{ Request::is(app()->getLocale().'/ui/alert') ? 'active':'' }}" href="{{ route('ui.alert',app()->getLocale()) }}">{{ trans('menu.ui-alert') }}</a></li>
-                                <li><a class="{{ Request::is(app()->getLocale().'/ui/avatar') ? 'active':'' }}" href="{{ route('ui.avatar',app()->getLocale()) }}">{{ trans('menu.ui-avatar') }}</a></li>
-                                <li><a class="{{ Request::is(app()->getLocale().'/ui/badge') ? 'active':'' }}" href="{{ route('ui.badge',app()->getLocale()) }}">{{ trans('menu.ui-badge') }}</a></li>
-                                <li><a class="{{ Request::is(app()->getLocale().'/ui/breadcrumps') ? 'active':'' }}" href="{{ route('ui.breadcrumps',app()->getLocale()) }}">{{ trans('menu.ui-breadcrumb') }}</a></li>
-                                <li><a class="{{ Request::is(app()->getLocale().'/ui/button') ? 'active':'' }}" href="{{ route('ui.button',app()->getLocale()) }}">{{ trans('menu.ui-button') }}</a></li>
-                                <li><a class="{{ Request::is(app()->getLocale().'/ui/card') ? 'active':'' }}" href="{{ route('ui.card',app()->getLocale()) }}">{{ trans('menu.ui-card') }}</a></li>
-                                <li><a class="{{ Request::is(app()->getLocale().'/ui/carousel') ? 'active':'' }}" href="{{ route('ui.carousel',app()->getLocale()) }}">{{ trans('menu.ui-carousel') }}</a></li>
-                                <li><a class="{{ Request::is(app()->getLocale().'/ui/checkbox') ? 'active':'' }}" href="{{ route('ui.checkbox',app()->getLocale()) }}">{{ trans('menu.ui-checkbox') }}</a></li>
-                                <li><a class="{{ Request::is(app()->getLocale().'/ui/collapse') ? 'active':'' }}" href="{{ route('ui.collapse',app()->getLocale()) }}">{{ trans('menu.ui-collapse') }}</a></li>
-                                <li><a class="{{ Request::is(app()->getLocale().'/ui/comments') ? 'active':'' }}" href="{{ route('ui.comments',app()->getLocale()) }}">{{ trans('menu.ui-comment') }}</a></li>
 
-                                </ul>
-                            </li>
                             <li>
                                 <span class="mega-title">Components</span>
                                 <ul>
@@ -501,262 +477,14 @@
                             </li>
                         </ul>
                     </li>
->>>>>>> tf
                 </ul>
             </div>
         </div>
     </div>
     <div class="navbar-right">
         <ul class="navbar-right__menu">
-            <li class="nav-search">
-                <a href="#" class="search-toggle">
-                    <i class="uil uil-search"></i>
-                    <i class="uil uil-times"></i>
-                </a>
-                <form action="/" class="search-form-topMenu">
-                    <span class="search-icon uil uil-search"></span>
-                    <input class="form-control me-sm-2 box-shadow-none" type="search" placeholder="Search..." aria-label="Search">
-                </form>
-            </li>
-            <li class="nav-message">
-                <div class="dropdown-custom">
-                    <a href="javascript:;" class="nav-item-toggle icon-active">
-                        <img class="svg" src="{{ asset('assets/img/svg/message.svg') }}" alt="img">
-                    </a>
-                    <div class="dropdown-wrapper">
-                        <h2 class="dropdown-wrapper__title">Messages <span class="badge-circle badge-success ms-1">2</span></h2>
-                        <ul>
-                            <li class="author-online has-new-message">
-                                <div class="user-avater">
-                                    <img src="{{ asset('assets/img/team-1.png') }}" alt="">
-                                </div>
-                                <div class="user-message">
-                                    <p>
-                                        <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">Web Design</a>
-                                        <span class="time-posted">3 hrs ago</span>
-                                    </p>
-                                    <p>
-                                        <span class="desc text-truncate" style="max-width: 215px;">Lorem ipsum
-                                            dolor amet cosec Lorem ipsum</span>
-                                        <span class="msg-count badge-circle badge-success badge-sm">1</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="author-offline has-new-message">
-                                <div class="user-avater">
-                                    <img src="{{ asset('assets/img/team-1.png') }}" alt="">
-                                </div>
-                                <div class="user-message">
-                                    <p>
-                                        <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">Web Design</a>
-                                        <span class="time-posted">3 hrs ago</span>
-                                    </p>
-                                    <p>
-                                        <span class="desc text-truncate" style="max-width: 215px;">Lorem ipsum
-                                            dolor amet cosec Lorem ipsum</span>
-                                        <span class="msg-count badge-circle badge-success badge-sm">1</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="author-online has-new-message">
-                                <div class="user-avater">
-                                    <img src="{{ asset('assets/img/team-1.png') }}" alt="">
-                                </div>
-                                <div class="user-message">
-                                    <p>
-                                        <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">Web Design</a>
-                                        <span class="time-posted">3 hrs ago</span>
-                                    </p>
-                                    <p>
-                                        <span class="desc text-truncate" style="max-width: 215px;">Lorem ipsum
-                                            dolor amet cosec Lorem ipsum</span>
-                                        <span class="msg-count badge-circle badge-success badge-sm">1</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="author-offline">
-                                <div class="user-avater">
-                                    <img src="{{ asset('assets/img/team-1.png') }}" alt="">
-                                </div>
-                                <div class="user-message">
-                                    <p>
-                                        <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">Web Design</a>
-                                        <span class="time-posted">3 hrs ago</span>
-                                    </p>
-                                    <p>
-                                        <span class="desc text-truncate" style="max-width: 215px;">Lorem ipsum
-                                            dolor amet cosec Lorem ipsum</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="author-offline">
-                                <div class="user-avater">
-                                    <img src="{{ asset('assets/img/team-1.png') }}" alt="">
-                                </div>
-                                <div class="user-message">
-                                    <p>
-                                        <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">Web Design</a>
-                                        <span class="time-posted">3 hrs ago</span>
-                                    </p>
-                                    <p>
-                                        <span class="desc text-truncate" style="max-width: 215px;">Lorem ipsum
-                                            dolor amet cosec Lorem ipsum</span>
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="" class="dropdown-wrapper__more">See All Message</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-notification">
-                <div class="dropdown-custom">
-                    <a href="javascript:;" class="nav-item-toggle icon-active">
-                        <img class="svg" src="{{ asset('assets/img/svg/alarm.svg') }}" alt="img">
-                    </a>
-                    <div class="dropdown-wrapper">
-                        <h2 class="dropdown-wrapper__title">Notifications <span class="badge-circle badge-warning ms-1">4</span></h2>
-                        <ul>
-                            <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
-                                <div class="nav-notification__type nav-notification__type--primary">
-                                    <img src="{{ asset('assets/img/svg/inbox.svg') }}" alt="inbox" class="svg">
-                                </div>
-                                <div class="nav-notification__details">
-                                    <p>
-                                        <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
-                                        <span>sent you a message</span>
-                                    </p>
-                                    <p>
-                                        <span class="time-posted">5 hours ago</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
-                                <div class="nav-notification__type nav-notification__type--secondary">
-                                    <img src="{{ asset('assets/img/svg/upload.svg') }}" alt="upload" class="svg">
-                                </div>
-                                <div class="nav-notification__details">
-                                    <p>
-                                        <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
-                                        <span>sent you a message</span>
-                                    </p>
-                                    <p>
-                                        <span class="time-posted">5 hours ago</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
-                                <div class="nav-notification__type nav-notification__type--success">
-                                    <img src="{{ asset('assets/img/svg/log-in.svg') }}" alt="log-in" class="svg">
-                                </div>
-                                <div class="nav-notification__details">
-                                    <p>
-                                        <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
-                                        <span>sent you a message</span>
-                                    </p>
-                                    <p>
-                                        <span class="time-posted">5 hours ago</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
-                                <div class="nav-notification__type nav-notification__type--info">
-                                    <img src="{{ asset('assets/img/svg/at-sign.svg') }}" alt="at-sign" class="svg">
-                                </div>
-                                <div class="nav-notification__details">
-                                    <p>
-                                        <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
-                                        <span>sent you a message</span>
-                                    </p>
-                                    <p>
-                                        <span class="time-posted">5 hours ago</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
-                                <div class="nav-notification__type nav-notification__type--danger">
-                                    <img src="{{ asset('assets/img/svg/heart.svg') }}" alt="heart" class="svg">
-                                </div>
-                                <div class="nav-notification__details">
-                                    <p>
-                                        <a href="" class="subject stretched-link text-truncate" style="max-width: 180px;">James</a>
-                                        <span>sent you a message</span>
-                                    </p>
-                                    <p>
-                                        <span class="time-posted">5 hours ago</span>
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="" class="dropdown-wrapper__more">See all incoming activity</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-settings">
-                <div class="dropdown-custom">
-                    <a href="javascript:;" class="nav-item-toggle">
-                        <img src="{{ asset('assets/img/setting.png') }}" alt="img">
-                    </a>
-                    <div class="dropdown-wrapper dropdown-wrapper--large">
-                        <ul class="list-settings">
-                            <li class="d-flex">
-                                <div class="me-3"><img src="{{ asset('assets/img/mail.png') }}" alt=""></div>
-                                <div class="flex-grow-1">
-                                    <h6>
-                                        <a href="" class="stretched-link">All Features</a>
-                                    </h6>
-                                    <p>Introducing Increment subscriptions </p>
-                                </div>
-                            </li>
-                            <li class="d-flex">
-                                <div class="me-3"><img src="{{ asset('assets/img/color-palette.png') }}" alt=""></div>
-                                <div class="flex-grow-1">
-                                    <h6>
-                                        <a href="" class="stretched-link">Themes</a>
-                                    </h6>
-                                    <p>Third party themes that are compatible</p>
-                                </div>
-                            </li>
-                            <li class="d-flex">
-                                <div class="me-3"><img src="{{ asset('assets/img/home.png') }}" alt=""></div>
-                                <div class="flex-grow-1">
-                                    <h6>
-                                        <a href="" class="stretched-link">Payments</a>
-                                    </h6>
-                                    <p>We handle billions of dollars</p>
-                                </div>
-                            </li>
-                            <li class="d-flex">
-                                <div class="me-3"><img src="{{ asset('assets/img/video-camera.png') }}" alt=""></div>
-                                <div class="flex-grow-1">
-                                    <h6>
-                                        <a href="" class="stretched-link">Design Mockups</a>
-                                    </h6>
-                                    <p>Share planning visuals with clients</p>
-                                </div>
-                            </li>
-                            <li class="d-flex">
-                                <div class="me-3"><img src="{{ asset('assets/img/document.png') }}" alt=""></div>
-                                <div class="flex-grow-1">
-                                    <h6>
-                                        <a href="" class="stretched-link">Content Planner</a>
-                                    </h6>
-                                    <p>Centralize content gethering and editing</p>
-                                </div>
-                            </li>
-                            <li class="d-flex">
-                                <div class="me-3"><img src="{{ asset('assets/img/microphone.png') }}" alt=""></div>
-                                <div class="flex-grow-1">
-                                    <h6>
-                                        <a href="" class="stretched-link">Diagram Maker</a>
-                                    </h6>
-                                    <p>Plan user flows & test scenarios</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
+
+
             <li class="nav-flag-select">
                 <div class="dropdown-custom">
                     @switch(app()->getLocale())
@@ -815,11 +543,11 @@
                             <ul>
                                 <li>
                                     <a href="">
-                                        <img src="{{ asset('assets/img/svg/user.svg') }}" alt="user" class="svg"> Profile</a>
+                                        <img src="{{ asset('assets/img/svg/user.svg') }}" alt="user" class="svg"> Perfil</a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{ asset('assets/img/svg/settings.svg') }}" alt="settings" class="svg"> Settings</a>
+                                        <img src="{{ asset('assets/img/svg/settings.svg') }}" alt="settings" class="svg"> Ajustes</a>
                                 </li>
                                 <li>
                                     <a href="">
@@ -827,16 +555,13 @@
                                 </li>
                                 <li>
                                     <a href="">
-                                        <img src="{{ asset('assets/img/svg/users.svg') }}" alt="users" class="svg"> Activity</a>
+                                        <img src="{{ asset('assets/img/svg/users.svg') }}" alt="users" class="svg"> Actividades</a>
                                 </li>
-                                <li>
-                                    <a href="">
-                                        <img src="{{ asset('assets/img/svg/bell.svg') }}" alt="bell" class="svg"> Help</a>
-                                </li>
+
                             </ul>
                             <a href="" class="nav-author__signout" onclick="event.preventDefault();document.getElementById('logout').submit();">
                                 <img src="{{ asset('assets/img/svg/log-out.svg') }}" alt="log-out" class="svg">
-                                 Sign Out</a>
+                                 Cerrar Sesion</a>
                                 <form style="display:none;" id="logout" action="{{ route('logout') }}" method="POST">
                                     @csrf
                                     @method('post')

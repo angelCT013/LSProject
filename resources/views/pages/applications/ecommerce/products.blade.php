@@ -360,7 +360,7 @@
                         <div class="card-body px-20 pb-25 pt-25">
                             <div class="product-item__body text-capitalize">
                             <a href="{{ route('ecommerce.product_detail',app()->getLocale()) }}">
-                                <h6 class="card-title">Montes scelerisque</h6>
+                                <h6 class="card-title">Producto1</h6>
                             </a>
                             <div class="stars-rating d-flex align-items-center flex-wrap mb-10">
                                 <span class="star-icon las la-star active"></span>
@@ -420,9 +420,9 @@
                         <li class="dm-pagination__item">
                         <div class="paging-option">
                             <select name="page-number" class="page-selection">
-                            <option value="20">20/page</option>
-                            <option value="40">40/page</option>
-                            <option value="60">60/page</option>
+                            <option value="20">20/paginas</option>
+                            <option value="40">40/paginas</option>
+                            <option value="60">60/paginas</option>
                             </select>
                         </div>
                         </li>
@@ -445,46 +445,13 @@
                 <div class="breadcrumb-main m-0 breadcrumb-main--table justify-content-sm-between ">
                     <div class=" d-flex flex-wrap justify-content-center breadcrumb-main__wrapper">
                         <div class="d-flex align-items-center ticket__title justify-content-center me-md-25 mb-md-0 mb-20">
-                            <h4 class="text-capitalize fw-500 breadcrumb-title">Data Table</h4>
+                            <h4 class="text-capitalize fw-500 breadcrumb-title">Productos</h4>
                         </div>
                     </div>
-                    <div class="action-btn">
-                        <a href="#" class="btn btn-primary">
-                            Export
-                            <i class="las la-angle-down"></i>
-                        </a>
-                    </div>
+
                 </div>
                 <div class="support-form datatable-support-form d-flex justify-content-xxl-between justify-content-center align-items-center flex-wrap">
-                    <div class="support-form__input">
-                        <div class="d-flex flex-wrap">
-                            <div class="support-form__input-id">
-                                <label>Id:</label>
-                                <div class="dm-select ">
-                                    <select name="select-search" class="select-search form-control ">
-                                        <option value="01">All</option>
-                                        <option value="02">Option 2</option>
-                                        <option value="03">Option 3</option>
-                                        <option value="04">Option 4</option>
-                                        <option value="05">Option 5</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="support-form__input-status">
-                                <label>status:</label>
-                                <div class="dm-select ">
-                                    <select name="select-search" class="select-search form-control ">
-                                        <option value="01">All</option>
-                                        <option value="02">Option 2</option>
-                                        <option value="03">Option 3</option>
-                                        <option value="04">Option 4</option>
-                                        <option value="05">Option 5</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <button class="support-form__input-button">search</button>
-                        </div>
-                    </div>
+
                     <div class="support-form__search">
                         <div class="support-order-search">
                             <form action="/" class="support-order-search__form">
@@ -499,33 +466,24 @@
                         <table class="table mb-0 table-borderless">
                             <thead>
                                 <tr class="userDatatable-header">
-                                    <th class="pe-0">
-                                        <div class="d-flex align-items-center">
-                                            <div class="custom-checkbox  check-all">
-                                                <input class="checkbox" type="checkbox" id="check-333">
-                                                <label for="check-333" class="ps-0">
-                                                    <span class="checkbox-text userDatatable-title"></span>
-                                                </label>
-                                            </div>
-                                        </div>
+
+                                    <th>
+                                        <span class="userDatatable-title">Producto</span>
                                     </th>
                                     <th>
-                                        <span class="userDatatable-title">User</span>
+                                        <span class="userDatatable-title">Direccion</span>
                                     </th>
                                     <th>
-                                        <span class="userDatatable-title">Country</span>
+                                        <span class="userDatatable-title">Tienda</span>
                                     </th>
                                     <th>
-                                        <span class="userDatatable-title">Company</span>
+                                        <span class="userDatatable-title">Marca</span>
                                     </th>
                                     <th>
-                                        <span class="userDatatable-title">Position</span>
+                                        <span class="userDatatable-title">Stock</span>
                                     </th>
                                     <th>
-                                        <span class="userDatatable-title">Join Date</span>
-                                    </th>
-                                    <th>
-                                        <span class="userDatatable-title">Status</span>
+                                        <span class="userDatatable-title">Estatus</span>
                                     </th>
                                     <th class="actions">
                                         <span class="userDatatable-title">Actions</span>
@@ -534,52 +492,39 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="pe-0">
-                                        <div class="d-flex">
-                                            <div class="userDatatable__imgWrapper d-flex align-items-center m-0">
-                                                <div class="checkbox-group-wrapper">
-                                                    <div class="checkbox-group d-flex">
-                                                        <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                            <input class="checkbox" type="checkbox" id="check-grp-#01">
-                                                            <label for="check-grp-#01" class="ps-0"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
+
                                     <td>
                                         <div class="d-flex">
                                             <div class="userDatatable-inline-title">
                                                 <a href="#" class="text-dark fw-500">
-                                                    <h6>Kellie Marquot</h6>
+                                                    <h6>Producto 1</h6>
                                                 </a>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="userDatatable-content--subject">
-                                            United Street
+                                            Refugio
                                         </div>
                                     </td>
                                     <td>
                                         <div class="userDatatable-content--subject">
-                                            Business Development
+                                            Aurrera
                                         </div>
                                     </td>
                                     <td>
                                         <div class="userDatatable-content--priority">
-                                            Web Developer
+                                            Toshiba
                                         </div>
                                     </td>
                                     <td>
                                         <div class="userDatatable-content--priority">
-                                            January 20, 2020
+                                            20
                                         </div>
                                     </td>
                                     <td>
                                         <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-success  color-success userDatatable-content-status active">active</span>
+                                            <span class="bg-opacity-success  color-success userDatatable-content-status active">Activo</span>
                                         </div>
                                     </td>
                                     <td>
@@ -603,47 +548,34 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="pe-0">
-                                        <div class="d-flex">
-                                            <div class="userDatatable__imgWrapper d-flex align-items-center m-0">
-                                                <div class="checkbox-group-wrapper">
-                                                    <div class="checkbox-group d-flex">
-                                                        <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                            <input class="checkbox" type="checkbox" id="check-grp-#02">
-                                                            <label for="check-grp-#02" class="ps-0"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
+
                                     <td>
                                         <div class="d-flex">
                                             <div class="userDatatable-inline-title">
                                                 <a href="#" class="text-dark fw-500">
-                                                    <h6>Robert Clinton</h6>
+                                                    <h6>Producto 2</h6>
                                                 </a>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="userDatatable-content--subject">
-                                            Japan
+                                           Florido
                                         </div>
                                     </td>
                                     <td>
                                         <div class="userDatatable-content--subject">
-                                            Vehicle Master
+                                        Tienda Ranita
                                         </div>
                                     </td>
                                     <td>
                                         <div class="userDatatable-content--priority">
-                                            Senior Manager
+                                           HP
                                         </div>
                                     </td>
                                     <td>
                                         <div class="userDatatable-content--priority">
-                                            January 20, 2020
+                                            16
                                         </div>
                                     </td>
                                     <td>
@@ -671,558 +603,7 @@
                                         </ul>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="pe-0">
-                                        <div class="d-flex">
-                                            <div class="userDatatable__imgWrapper d-flex align-items-center m-0">
-                                                <div class="checkbox-group-wrapper">
-                                                    <div class="checkbox-group d-flex">
-                                                        <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                            <input class="checkbox" type="checkbox" id="check-grp-#03">
-                                                            <label for="check-grp-#03" class="ps-0"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="userDatatable-inline-title">
-                                                <a href="#" class="text-dark fw-500">
-                                                    <h6>Chris Joe</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            South Africa
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Business Development
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            Content writer
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            July 30, 2020
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-danger  color-danger userDatatable-content-status active">blocked</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
-                                            <li>
-                                                <a href="#" class="view">
-                                                    <i class="uil uil-setting"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="edit">
-                                                    <i class="uil uil-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="remove">
-                                                    <i class="uil uil-trash-alt"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pe-0">
-                                        <div class="d-flex">
-                                            <div class="userDatatable__imgWrapper d-flex align-items-center m-0">
-                                                <div class="checkbox-group-wrapper">
-                                                    <div class="checkbox-group d-flex">
-                                                        <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                            <input class="checkbox" type="checkbox" id="check-grp-#04">
-                                                            <label for="check-grp-#04" class="ps-0"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="userDatatable-inline-title">
-                                                <a href="#" class="text-dark fw-500">
-                                                    <h6>Jack Kalis</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            South Korea
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Smart Collection
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            UX/UI Designer
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            June 20, 2020
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-success  color-success userDatatable-content-status active">open</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
-                                            <li>
-                                                <a href="#" class="view">
-                                                    <i class="uil uil-setting"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="edit">
-                                                    <i class="uil uil-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="remove">
-                                                    <i class="uil uil-trash-alt"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pe-0">
-                                        <div class="d-flex">
-                                            <div class="userDatatable__imgWrapper d-flex align-items-center m-0">
-                                                <div class="checkbox-group-wrapper">
-                                                    <div class="checkbox-group d-flex">
-                                                        <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                            <input class="checkbox" type="checkbox" id="check-grp-#05">
-                                                            <label for="check-grp-#05" class="ps-0"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="userDatatable-inline-title">
-                                                <a href="#" class="text-dark fw-500">
-                                                    <h6>Black Smith</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            United Kingdom
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Print Media
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            Graphic Designer
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            August 20, 2020
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-success  color-success userDatatable-content-status active">open</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
-                                            <li>
-                                                <a href="#" class="view">
-                                                    <i class="uil uil-setting"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="edit">
-                                                    <i class="uil uil-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="remove">
-                                                    <i class="uil uil-trash-alt"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pe-0">
-                                        <div class="d-flex">
-                                            <div class="userDatatable__imgWrapper d-flex align-items-center m-0">
-                                                <div class="checkbox-group-wrapper">
-                                                    <div class="checkbox-group d-flex">
-                                                        <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                            <input class="checkbox" type="checkbox" id="check-grp-#06">
-                                                            <label for="check-grp-#06" class="ps-0"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="userDatatable-inline-title">
-                                                <a href="#" class="text-dark fw-500">
-                                                    <h6>Aftab Ahmed</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Bangladesh
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Online Super Shop
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            Marketer
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            January 15, 2021
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-success  color-success userDatatable-content-status active">open</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
-                                            <li>
-                                                <a href="#" class="view">
-                                                    <i class="uil uil-setting"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="edit">
-                                                    <i class="uil uil-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="remove">
-                                                    <i class="uil uil-trash-alt"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pe-0">
-                                        <div class="d-flex">
-                                            <div class="userDatatable__imgWrapper d-flex align-items-center m-0">
-                                                <div class="checkbox-group-wrapper">
-                                                    <div class="checkbox-group d-flex">
-                                                        <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                            <input class="checkbox" type="checkbox" id="check-grp-#07">
-                                                            <label for="check-grp-#07" class="ps-0"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="userDatatable-inline-title">
-                                                <a href="#" class="text-dark fw-500">
-                                                    <h6>Daniel White</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Australia
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Business Development
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            Project Manager
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            January 20, 2021
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-success  color-success userDatatable-content-status active">open</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
-                                            <li>
-                                                <a href="#" class="view">
-                                                    <i class="uil uil-setting"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="edit">
-                                                    <i class="uil uil-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="remove">
-                                                    <i class="uil uil-trash-alt"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pe-0">
-                                        <div class="d-flex">
-                                            <div class="userDatatable__imgWrapper d-flex align-items-center m-0">
-                                                <div class="checkbox-group-wrapper">
-                                                    <div class="checkbox-group d-flex">
-                                                        <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                            <input class="checkbox" type="checkbox" id="check-grp-#08">
-                                                            <label for="check-grp-#08" class="ps-0"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="userDatatable-inline-title">
-                                                <a href="#" class="text-dark fw-500">
-                                                    <h6>Black Smith</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            United Kingdom
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Print Media
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            Graphic Designer
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            August 20, 2020
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-success  color-success userDatatable-content-status active">open</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
-                                            <li>
-                                                <a href="#" class="view">
-                                                    <i class="uil uil-setting"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="edit">
-                                                    <i class="uil uil-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="remove">
-                                                    <i class="uil uil-trash-alt"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pe-0">
-                                        <div class="d-flex">
-                                            <div class="userDatatable__imgWrapper d-flex align-items-center m-0">
-                                                <div class="checkbox-group-wrapper">
-                                                    <div class="checkbox-group d-flex">
-                                                        <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                            <input class="checkbox" type="checkbox" id="check-grp-#09">
-                                                            <label for="check-grp-#09" class="ps-0"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="userDatatable-inline-title">
-                                                <a href="#" class="text-dark fw-500">
-                                                    <h6>Aftab Ahmed</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Bangladesh
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Online Super Shop
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            Marketer
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            January 15, 2021
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-success  color-success userDatatable-content-status active">open</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
-                                            <li>
-                                                <a href="#" class="view">
-                                                    <i class="uil uil-setting"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="edit">
-                                                    <i class="uil uil-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="remove">
-                                                    <i class="uil uil-trash-alt"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pe-0">
-                                        <div class="d-flex">
-                                            <div class="userDatatable__imgWrapper d-flex align-items-center m-0">
-                                                <div class="checkbox-group-wrapper">
-                                                    <div class="checkbox-group d-flex">
-                                                        <div class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex">
-                                                            <input class="checkbox" type="checkbox" id="check-grp-#10">
-                                                            <label for="check-grp-#10" class="ps-0"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="userDatatable-inline-title">
-                                                <a href="#" class="text-dark fw-500">
-                                                    <h6>Daniel White</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Australia
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Business Development
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            Project Manager
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            January 20, 2021
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-success  color-success userDatatable-content-status active">open</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
-                                            <li>
-                                                <a href="#" class="view">
-                                                    <i class="uil uil-setting"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="edit">
-                                                    <i class="uil uil-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="remove">
-                                                    <i class="uil uil-trash-alt"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>

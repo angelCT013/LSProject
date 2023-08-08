@@ -1,12 +1,12 @@
 <div class="sidebar__menu-group">
     <ul class="sidebar_nav">
-        
-        <li>
+
+        <!-- <li>
             <a href="{{ route('pages.blank',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/pages/blank') ? 'active':'' }}">
                 <span class="nav-icon uil uil-circle"></span>
                 <span class="menu-text">{{ trans('menu.blank-menu-title') }}</span>
             </a>
-        </li>
+        </li> -->
 
         <li class="has-child {{ Request::is(app()->getLocale().'/applications/ecommerce/*') ? 'open':'' }}">
             <a href="#" class="{{ Request::is(app()->getLocale().'/applications/ecommerce/*') ? 'active':'' }}">

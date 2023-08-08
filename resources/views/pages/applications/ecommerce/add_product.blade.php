@@ -103,14 +103,14 @@
                                                 <label for="exampleFormControlTextarea1">Description</label>
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe una descripcion del producto"></textarea>
                                             </div>
-                                            <div class="form-group">
+                                            <!-- <div class="form-group">
                                                 <label for="name8">Meta Title</label>
                                                 <input type="text" class="form-control" id="name8" placeholder="Meta title">
                                             </div>
                                             <div class="form-group mb-0">
                                                 <label for="name9">Meta Keyword</label>
                                                 <input type="text" class="form-control" id="name9" placeholder="Meta keyword">
-                                            </div>
+                                            </div> -->
                                         </form>
                                     </div>
                                 </div>
