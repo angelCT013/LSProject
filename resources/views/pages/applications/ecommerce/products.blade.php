@@ -681,6 +681,7 @@
                     console.log(status);
                     console.log(imagen);
                     console.log(descripcion);
+                    console.log('----');
                 })
 
             }
