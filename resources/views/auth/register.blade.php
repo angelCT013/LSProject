@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/variables.css') }}">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/mls/logotype1-dark.png') }}">
 </head>
 <body>
     <main class="main-content">
@@ -56,7 +56,7 @@
                                                 </div>
 
                                             </div>
-                                            
+
                                             <div class="row">
                                                 <div class="col-md-6">
                                             <div class="form-group mb-15">
@@ -74,7 +74,7 @@
                                             <div class="form-group mb-15">
 
                                                 <label for="tipo_usuario_id">Tipo de cuenta</label>
-                                                
+
                                                 <select class="js-example-basic-single js-states form-control" name="tipo_usuario_id" id="tipo_usuario_id" required>
                                                 <option value="" selected>Seleccione tipo de cuenta</option>
 
@@ -88,32 +88,32 @@
 
 
                                     </div>
-                                    
+
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-20">
                                                         <label for="nombre">Nombre</label></label>
                                                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre..." required>
-        
+
                                                     </div>
-                                                </div>   
+                                                </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-20">
                                                         <label for="apellido">Apellido</label></label>
                                                         <input type="text" class="form-control" id="apellido" name="apellido" placeholder="apellido..." required>
-        
+
                                                     </div>
-                                                </div>         
-             
+                                                </div>
+
                                             </div>
-                       
+
                                             <div class="row">
                                                 <div class="col-md-6">
 
                                                 <div class="form-group mb-10">
                                                     <label for="calle">Calle</label></label>
                                                     <input type="text" class="form-control" id="calle" name="calle" placeholder="calle..." required>
-    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -121,7 +121,7 @@
                                                 <div class="form-group mb-10">
                                                     <label for="colonia">Colonia</label></label>
                                                     <input type="text" class="form-control" id="colonia" name="colonia" placeholder="colonia..." required>
-    
+
                                                 </div>
                                             </div>
 
@@ -131,7 +131,7 @@
                                                     <div class="form-group mb-10">
                                                         <label for="cp">Codigo Postal</label></label>
                                                         <input type="text" class="form-control" id="cp" name="cp" placeholder="codigo postal..." required>
-        
+
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
@@ -139,33 +139,33 @@
                                                         <label for="ciudad">Ciudad</label></label>
                                                         <select class="js-example-basic-single js-states form-control" name="ciudad" id="ciudad" required>
                                                             <option value="" selected>Seleccione Ciudad</option>
-            
+
                                                                 <option value="1">Tijuana</option>
                                                                 <option value="2">Ensenada</option>
                                                                 <option value="3">Rosarito</option>
                                                                 <option value="4">Tecate</option>
                                                                 <option value="5">Mexicali</option>
                                                                 <option value="6">San Quintin</option>
-            
+
                                                             </select>
-        
+
                                                     </div>
                                                 </div>
-          
-             
+
+
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-20">
                                                         <label for="telefono">Telefono</label></label>
                                                         <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono..." required>
-        
+
                                                     </div>
-                                                </div>          
-             
+                                                </div>
+
                                             </div>
- 
-                                            
+
+
                                             {{-- <div class="admin-condition">
                                                 <div class="checkbox-theme-default custom-checkbox ">
                                                     <input class="checkbox" type="checkbox" id="check-1">
