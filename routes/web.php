@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\productosController;
@@ -28,7 +29,9 @@ Route::post('/logout',[AuthController::class,'logout'])->name('logout')->middlew
 Route::get('/lang/{lang}',[ LanguageController::class,'switchLang'])->name('switch_lang');
 Route::get('/pagination-per-page/{per_page}',[ PaginationController::class,'set_pagination_per_page'])->name('pagination_per_page');
 
-Route::get('datatable', [DataTableController::class, 'index']);
+// Route::get('datatable', [DataTableController::class, 'index']);
+Route::post('/addProducto',[ProductoController::class,'addProducto'])->name('addProducto');
+
 
 Route::get('/obtener-productos',[productosController::class,'obtenerProductos']);
 

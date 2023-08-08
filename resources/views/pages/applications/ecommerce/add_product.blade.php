@@ -34,7 +34,7 @@
                                         <h6 class="fw-500">Información sobre el producto</h6>
                                     </div>
                                     <div class="add-product__body px-sm-40 px-20">
-                                        <form>
+                                        {{-- <form>
                                             <div class="form-group">
                                                 <label for="name1">Nombre del producto</label>
                                                 <input type="text" class="form-control" id="name1" placeholder="red chair">
@@ -111,11 +111,80 @@
                                                 <label for="name9">Meta Keyword</label>
                                                 <input type="text" class="form-control" id="name9" placeholder="Meta keyword">
                                             </div> -->
+                                        </form> --}}
+                                        <form action="{{ route('ecommerce.add_product', app()->getLocale()) }}" method="post">
+                                            @csrf
+                                            <div class="form-group">
+                                                <label for="nombre">Nombre</label>
+                                                <input  class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre producto..." required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="numSerie">Número de Serie</label>
+                                                <input  class="form-control" type="text" name="numSerie" id="numSerie" placeholder="Número de serie del producto..." required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="status_id">Estado</label>
+                                                <select class="js-example-basic-single js-states form-control" name="status_id" id="status_id" required>
+                                                    <option value="1">Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                    <option value="3">Baja</option>
+    
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                                                            
+                                            <label for="modelo_id">Modelo</label>
+                                            <select class="js-example-basic-single js-states form-control" name="modelo_id" id="modelo_id" required>
+                                                <option value="" selected>Seleccionar Modelo</option>
+                                                <option value="1">Z Book</option>
+                                                <option value="2">ThinkPad</option>
+                                                <option value="3">MacBook Pro</option>
+                                                <option value="4">Galaxy Book</option>
+                                                <option value="5">XPS</option>
+                                                <option value="6">VAIO</option>
+                                                <option value="7">ROG</option>
+                                                <option value="8">Surface Laptop</option>
+                                                <option value="9">Satellite</option>
+                                                <option value="10">Gram</option>
+                                                <option value="11">Toughbook</option>
+                                                <option value="12">ThinkCentre</option>
+                                            </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="categoria_id">Categoría</label>
+                                                <select class="js-example-basic-single js-states form-control" name="categoria_id" id="categoria_id" required>
+                                                    <option value="" selected>Seleccionar Categoria</option>
+                                                    <option value="1">Tecnologia</option>
+                                                    <option value="2">Bebes</option>
+                                                    <option value="3">Ropa</option>
+                                                    <option value="4">Higiene</option>
+                                                    <option value="5">Belleza</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                                                            
+                                            <label for="descripcion">Descripción</label>
+                                            <textarea class="form-control" rows="3" name="descripcion" id="descripcion" placeholder="Descripcion producto..." required></textarea>
+                                            </div>
+
+                                            <button class="btn btn-primary btn-default btn-squared text-capitalize" type="submit">Guardar Producto</button>
+                                            
+                                            
+                                            {{-- <label for="imagen">Imagen</label>
+                                            <input type="text" name="imagen" id="imagen"> --}}
+
+                                            
                                         </form>
+                                        @if(session('success'))
+                                            <div class="alert alert-success">
+                                                {{ session('success') }}
+                                            </div>
+                                        @endif
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="card add-product p-sm-30 p-20 ">
+                            {{-- <div class="card add-product p-sm-30 p-20 ">
                                 <div class="card-body p-0">
                                     <div class="card-header">
                                         <h6 class="fw-500">Imagen del producto</h6>
@@ -155,7 +224,7 @@
                                 </button>
                                 <button class="btn btn-primary btn-default btn-squared text-capitalize">Guardar
                                 </button>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

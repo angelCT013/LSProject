@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Validator;
 use Auth;
 use App\Models\User;
-
+use Illuminate\Support\Facades\DB;
 class AuthController extends Controller {
 
     /**
@@ -78,13 +78,35 @@ class AuthController extends Controller {
         ]);
         if($validators->fails()){
             return redirect()->route('login')->withErrors($validators)->withInput();
-        }else{
-            if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
-                return redirect()->intended(route('dashboard.demo_one','es'))->with('message','Bienvenido!');
-            }else{
-                return redirect()->route('login')->with('message','Error !Email/Password son incorrectas !');
-            }
-        }
+        // }else{
+        //     if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
+        //         return redirect()->intended(route('dashboard.demo_one','es'))->with('message','Bienvenido!');
+        //     }else{
+        //         return redirect()->route('login')->with('message','Error !Email/Password son incorrectas !');
+        //     }
+        // }
+    } else {
+        // Llamar al stored procedure pasando los datos del usuario
+        DB::statement("CALL sp_alta_usuario(?, ?, ?, ?, ?, ?, ?, ?)", [
+            $request->calle,
+            $request->colonia,
+            $request->cp,
+            $request->ciudad_id,
+            $request->name,
+            $request->apellido,
+            $request->email,
+            bcrypt($request->password),
+        ]);
+
+        // Realizar el login
+        auth()->attempt([
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+
+        // Redirigir al usuario
+        return redirect()->intended(route('dashboard.demo_one', 'en'))->with('message', 'Registration was successful!');
+    }
     }
 
     /**
