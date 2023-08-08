@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PaginationController;
-
+use App\Http\Controllers\productosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,4 +30,5 @@ Route::get('/pagination-per-page/{per_page}',[ PaginationController::class,'set_
 
 Route::get('datatable', [DataTableController::class, 'index']);
 
+Route::get('/obtener-productos',[productosController::class,'obtenerProductos']);
 

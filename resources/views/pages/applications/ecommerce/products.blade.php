@@ -2,6 +2,7 @@
 @section('description',$description)
 @extends('layout.app')
 @section('content')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
@@ -344,6 +345,11 @@
             <div class="tab-pane fade show active" id="ap-overview" role="tabpanel" aria-labelledby="ap-overview-tab">
                 <!-- Start: Shop Item -->
                 <div class="row product-page-list justify-content-center">
+
+
+
+
+
                 <div class="cus-xl-3 col-lg-6 col-md-11 col-12 mb-30 px-10">
 
                     <div class="card product product--grid">
@@ -388,11 +394,16 @@
                         </div>
 
 
+
                         </div>
                     </div>
                     </div>
 
                 </div>
+
+
+
+
 
 
                 <!-- End: Shop Item -->
@@ -639,4 +650,43 @@
                 </div>
             </div>
         </div>
+
+        <script type='text/javascript'>
+
+
+         $(document).ready(function(){
+            productos();
+         })
+
+         function productos(){
+            var datos = {'tipo':'productos'};
+           $.ajax({
+            type:"GET",
+            url:"/obtener-productos",
+            datatype:'json',
+            success: function(response){
+                let res = response;
+                console.log(response);
+                res.forEach(function(valor,index,array){
+                    var producto_id = valor.producto_id;
+                    var nombre = valor.nombre;
+                    var numSerie = valor.numSerie;
+                    var status = valor.status_id;
+                    var imagen = valor.imange;
+                    var descripcion = valor.descripcion;
+
+                    console.log(producto_id);
+                    console.log(nombre);
+                    console.log(numSerie);
+                    console.log(status);
+                    console.log(imagen);
+                    console.log(descripcion);
+                })
+
+            }
+           })
+
+
+         }
+        </script>
 @endsection
