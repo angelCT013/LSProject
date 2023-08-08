@@ -9,13 +9,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Productos extends Model
+class Usuarios extends Model
 {
-    protected $table = 'vProductos';
-    protected $primaryKey = 'producto_id';
+    protected $table = 'vUsuarios';
+    protected $primaryKey = 'id';
     public $timestamps = true;
 
-    // Relación con la tabla 'categoria'
- 
 }
 

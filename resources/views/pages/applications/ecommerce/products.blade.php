@@ -690,4 +690,33 @@
 
          }
         </script>
+
+
+
+        <script>
+
+$(document).ready(function(){
+            usuarios();
+         })
+
+         function usuarios(){
+            var datos = {'tipo':'productos'};
+           $.ajax({
+            type:"GET",
+            url:"/obtener-usuarios",
+            datatype:'json',
+            success: function(response){
+                let res = response;
+                console.log(response);
+                res.forEach(function(valor,index,array){
+                   
+                })
+
+            }
+           })
+
+
+         }
+
+        </script>
 @endsection

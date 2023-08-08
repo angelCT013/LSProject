@@ -17,7 +17,6 @@
             <ul>
                 <li><a href="{{ route('ecommerce.products',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/ecommerce/products') ? 'active':'' }}">{{ trans('menu.ecommerce-products') }}</a></li>
                 <li><a href="{{ route('ecommerce.add_product',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/ecommerce/add-product') ? 'active':'' }}">{{ trans('menu.ecommerce-product-add') }}</a></li>
-                <li><a href="{{ route('ecommerce.usuarios',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/ecommerce/usuarios') ? 'active':'' }}">{{ trans('menu.ecommerce-usuarios') }}</a></li>
             </ul>
         </li>
     </ul>
