@@ -167,7 +167,7 @@
                                             <textarea class="form-control" rows="3" name="descripcion" id="descripcion" placeholder="Descripcion producto..."></textarea>
                                             </div>
 
-                                            <button type="submit">Guardar Producto</button>
+                                            <button class="btn btn-primary btn-default btn-squared text-capitalize" type="submit">Guardar Producto</button>
                                             
                                             
                                             {{-- <label for="imagen">Imagen</label>
