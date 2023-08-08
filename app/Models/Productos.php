@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Productos extends Model
 {
-    protected $table = 'vProductos';
+    protected $table = 'vProductos2';
     protected $primaryKey = 'producto_id';
     public $timestamps = true;
 

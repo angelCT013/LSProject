@@ -491,7 +491,7 @@
                                         <span class="userDatatable-title">Tienda</span>
                                     </th>
                                     <th>
-                                        <span class="userDatatable-title">Marca</span>
+                                        <span class="userDatatable-title">Precio</span>
                                     </th>
                                     <th>
                                         <span class="userDatatable-title">Stock</span>
@@ -504,119 +504,12 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
+                            <tbody class='tbody'>
 
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="userDatatable-inline-title">
-                                                <a href="#" class="text-dark fw-500">
-                                                    <h6>Producto 1</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Refugio
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                            Aurrera
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            Toshiba
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            20
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-success  color-success userDatatable-content-status active">Activo</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
-                                            <li>
-                                                <a href="#" class="view">
-                                                    <i class="uil uil-setting"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="edit">
-                                                    <i class="uil uil-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="remove">
-                                                    <i class="uil uil-trash-alt"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
+                                
 
-                                    <td>
-                                        <div class="d-flex">
-                                            <div class="userDatatable-inline-title">
-                                                <a href="#" class="text-dark fw-500">
-                                                    <h6>Producto 2</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                           Florido
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--subject">
-                                        Tienda Ranita
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                           HP
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content--priority">
-                                            16
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="userDatatable-content d-inline-block">
-                                            <span class="bg-opacity-warning  color-warning userDatatable-content-status active">deactivated</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
-                                            <li>
-                                                <a href="#" class="view">
-                                                    <i class="uil uil-setting"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="edit">
-                                                    <i class="uil uil-edit"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="remove">
-                                                    <i class="uil uil-trash-alt"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
+
+                                
 
                             </tbody>
                         </table>
@@ -659,6 +552,8 @@
          })
 
          function productos(){
+            var tbody = document.querySelector('.tbody');
+            console.log(tbody);
             var datos = {'tipo':'productos'};
            $.ajax({
             type:"GET",
@@ -674,14 +569,74 @@
                     var status = valor.status_id;
                     var imagen = valor.imange;
                     var descripcion = valor.descripcion;
+                    var nCategoria = valor.categoria;
+                    var calle = valor.calle;
+                    var colonia = valor.colonia;
+                    var nstatus = valor.estatus;
+                    var nmodelo = valor.modelo;
+                    var franquicia = valor.franquicia;
+                    var precio = valor.precio;
+                    var stock = valor.stock;
+                  
+                    var html =    '<tr>'
+                                    +'<td>'
+                                        +'<div class="d-flex">'
+                                            +'<div class="userDatatable-inline-title">'
+                                                +'<a href="#" class="text-dark fw-500">'
+                                                    +'<h6>'+nombre+'</h6>'
+                                                +'</a>'
+                                            +'</div>'
+                                        +'</div>'
+                                    +'</td>'
+                                    +'<td>'
+                                        +'<div class="userDatatable-content--subject">'
+                                              +'<h6>'+colonia+'</h6>'
+                                        +'</div>'
+                                    +'</td>'
+                                    +'<td>'
+                                        +'<div class="userDatatable-content--subject">'
+                                            +'<h6>'+franquicia+'</h6>'
+                                        +'</div>'
+                                    +'</td>'
+                                    +'<td>'
+                                        +'<div class="userDatatable-content--priority">'
+                                            +'<h6>'+precio+'</h6>'
+                                        +'</div>'
+                                    +'</td>'
+                                    +'<td>'
+                                        +'<div class="userDatatable-content--priority">'
+                                             +'<h6>'+stock+'</h6>'
+                                        +'</div>'
+                                    +'</td>'
+                                    +'<td>'
+                                        +'<div class="userDatatable-content d-inline-block">'
+                                            +'<span class="bg-opacity-success  color-success userDatatable-content-status active">Activo</span>'
+                                       +'</div>'
+                                    +'</td>'
+                                    +'<td>'
+                                        +'<ul class="orderDatatable_actions mb-0 d-flex flex-wrap">'
+                                            +'<li>'
+                                                +'<a href="#" class="view">'
+                                                    +'<i class="uil uil-setting"></i>'
+                                                +'</a>'
+                                            +'</li>'
+                                            +'<li>'
+                                                +'<a href="#" class="edit">'
+                                                    +'<i class="uil uil-edit"></i>'
+                                                +'</a>'
+                                            +'</li>'
+                                            +'<li>'
+                                                +'<a href="#" class="remove">'
+                                                    +'<i class="uil uil-trash-alt"></i>'
+                                                +'</a>'
+                                            +'</li>'
+                                        +'</ul>'
+                                    +'</td>'
+                                +'</tr>';  
 
-                    console.log(producto_id);
-                    console.log(nombre);
-                    console.log(numSerie);
-                    console.log(status);
-                    console.log(imagen);
-                    console.log(descripcion);
-                    console.log('----');
+                                $(html).appendTo(tbody);        
+
+
                 })
 
             }
