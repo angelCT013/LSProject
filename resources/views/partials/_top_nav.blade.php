@@ -2,7 +2,7 @@
     <div class="navbar-left">
         <div class="logo-area">
             <a class="navbar-brand" href="{{ route('dashboard.demo_one',app()->getLocale()) }}">
-            <img class="dark" src="{{ asset('assets/img/mls/logotype3-dark.png') }}" alt="">
+            <img class="dark" src="{{ asset('assets/img/mls/logotype3-dark.svg') }}" alt="">
             <img class="light" src="{{ asset('assets/img/mls/logotype3-white.png') }}" alt="" heigth="">
             </a>
             <a href="#" class="sidebar-toggle">

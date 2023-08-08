@@ -20,7 +20,7 @@
                     <div class="col-xxl-3 col-xl-4 col-md-6 col-sm-8">
                         <div class="edit-profile">
                             <div class="edit-profile__logos">
-                                <img class="dark" src="{{ asset('assets/img/mls/logotype3-dark.png') }}" alt="">
+                                <img class="dark" src="{{ asset('assets/img/mls/logotype3-dark.svg') }}" alt="">
                                 <img class="light" src="{{ asset('assets/img/mls/logotype3-white.png') }}" alt="">
                             </div>
                             <div class="card border-0">
