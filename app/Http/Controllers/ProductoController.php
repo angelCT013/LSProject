@@ -14,7 +14,8 @@ class ProductoController extends Controller
         $status_id = $request->input('status_id');
         $modelo_id = $request->input('modelo_id');
         $categoria_id = $request->input('categoria_id');
-        $imagen = $request->input('imagen');
+        // $imagen = $request->input('imagen');
+        $imagen = 'producto.png';
         $descripcion = $request->input('descripcion');
         
         // Llamar al procedimiento almacenado para insertar el producto

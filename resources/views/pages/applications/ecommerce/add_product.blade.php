@@ -114,22 +114,28 @@
                                         </form> --}}
                                         <form action="{{ route('ecommerce.add_product', app()->getLocale()) }}" method="post">
                                             @csrf
-                                            <label for="nombre">Nombre</label>
-                                            <input type="text" name="nombre" id="nombre" required>
-                                            
-                                            <label for="numSerie">Número de Serie</label>
-                                            <input type="text" name="numSerie" id="numSerie">
-                                            
-                                            <label for="status_id">Estado</label>
-                                            <select name="status_id" id="status_id">
-                                                <option value="1">Activo</option>
-                                                <option value="2">Inactivo</option>
-                                                <option value="3">Baja</option>
-
-                                            </select>
-                                            
+                                            <div class="form-group">
+                                                <label for="nombre">Nombre</label>
+                                                <input  class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre producto..." required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="numSerie">Número de Serie</label>
+                                                <input  class="form-control" type="text" name="numSerie" id="numSerie" placeholder="Número de serie del producto...">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="status_id">Estado</label>
+                                                <select class="js-example-basic-single js-states form-control" name="status_id" id="status_id">
+                                                    <option value="1">Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                    <option value="3">Baja</option>
+    
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                                                            
                                             <label for="modelo_id">Modelo</label>
-                                            <select name="modelo_id" id="modelo_id">
+                                            <select class="js-example-basic-single js-states form-control" name="modelo_id" id="modelo_id">
+                                                <option value="" selected>Seleccionar Modelo</option>
                                                 <option value="1">Z Book</option>
                                                 <option value="2">ThinkPad</option>
                                                 <option value="3">MacBook Pro</option>
@@ -143,23 +149,31 @@
                                                 <option value="11">Toughbook</option>
                                                 <option value="12">ThinkCentre</option>
                                             </select>
-                                            
-                                            <label for="categoria_id">Categoría</label>
-                                            <select name="categoria_id" id="categoria_id">
-                                                <option value="1">Tecnologia</option>
-                                                <option value="2">Bebes</option>
-                                                <option value="3">Ropa</option>
-                                                <option value="4">Higiene</option>
-                                                <option value="5">Belleza</option>
-                                            </select>
-                                            
-                                            <label for="imagen">Imagen</label>
-                                            <input type="text" name="imagen" id="imagen">
-                                            
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="categoria_id">Categoría</label>
+                                                <select class="js-example-basic-single js-states form-control" name="categoria_id" id="categoria_id">
+                                                    <option value="" selected>Seleccionar Categoria</option>
+                                                    <option value="1">Tecnologia</option>
+                                                    <option value="2">Bebes</option>
+                                                    <option value="3">Ropa</option>
+                                                    <option value="4">Higiene</option>
+                                                    <option value="5">Belleza</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                                                            
                                             <label for="descripcion">Descripción</label>
-                                            <textarea name="descripcion" id="descripcion"></textarea>
-                                            
+                                            <textarea class="form-control" rows="3" name="descripcion" id="descripcion" placeholder="Descripcion producto..."></textarea>
+                                            </div>
+
                                             <button type="submit">Guardar Producto</button>
+                                            
+                                            
+                                            {{-- <label for="imagen">Imagen</label>
+                                            <input type="text" name="imagen" id="imagen"> --}}
+
+                                            
                                         </form>
                                         @if(session('success'))
                                             <div class="alert alert-success">
@@ -170,7 +184,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card add-product p-sm-30 p-20 ">
+                            {{-- <div class="card add-product p-sm-30 p-20 ">
                                 <div class="card-body p-0">
                                     <div class="card-header">
                                         <h6 class="fw-500">Imagen del producto</h6>
@@ -210,7 +224,7 @@
                                 </button>
                                 <button class="btn btn-primary btn-default btn-squared text-capitalize">Guardar
                                 </button>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
