@@ -120,11 +120,11 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="numSerie">Número de Serie</label>
-                                                <input  class="form-control" type="text" name="numSerie" id="numSerie" placeholder="Número de serie del producto...">
+                                                <input  class="form-control" type="text" name="numSerie" id="numSerie" placeholder="Número de serie del producto..." required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="status_id">Estado</label>
-                                                <select class="js-example-basic-single js-states form-control" name="status_id" id="status_id">
+                                                <select class="js-example-basic-single js-states form-control" name="status_id" id="status_id" required>
                                                     <option value="1">Activo</option>
                                                     <option value="2">Inactivo</option>
                                                     <option value="3">Baja</option>
@@ -134,7 +134,7 @@
                                             <div class="form-group">
                                                                                             
                                             <label for="modelo_id">Modelo</label>
-                                            <select class="js-example-basic-single js-states form-control" name="modelo_id" id="modelo_id">
+                                            <select class="js-example-basic-single js-states form-control" name="modelo_id" id="modelo_id" required>
                                                 <option value="" selected>Seleccionar Modelo</option>
                                                 <option value="1">Z Book</option>
                                                 <option value="2">ThinkPad</option>
@@ -152,7 +152,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="categoria_id">Categoría</label>
-                                                <select class="js-example-basic-single js-states form-control" name="categoria_id" id="categoria_id">
+                                                <select class="js-example-basic-single js-states form-control" name="categoria_id" id="categoria_id" required>
                                                     <option value="" selected>Seleccionar Categoria</option>
                                                     <option value="1">Tecnologia</option>
                                                     <option value="2">Bebes</option>
@@ -164,7 +164,7 @@
                                             <div class="form-group">
                                                                                             
                                             <label for="descripcion">Descripción</label>
-                                            <textarea class="form-control" rows="3" name="descripcion" id="descripcion" placeholder="Descripcion producto..."></textarea>
+                                            <textarea class="form-control" rows="3" name="descripcion" id="descripcion" placeholder="Descripcion producto..." required></textarea>
                                             </div>
 
                                             <button class="btn btn-primary btn-default btn-squared text-capitalize" type="submit">Guardar Producto</button>

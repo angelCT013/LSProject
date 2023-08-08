@@ -17,7 +17,7 @@
         <div class="admin" style="background-image:url({{ asset('assets/img/admin-bg-light.png') }});">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-xxl-3 col-xl-4 col-md-6 col-sm-8">
+                    <div class="col-xxl-8 col-xl-8 col-md-8 col-sm-8">
                         <div class="edit-profile">
                             <div class="edit-profile__logos">
                                 <img class="dark" src="{{ asset('assets/img/mls/logotype3-dark.svg') }}" alt="">
@@ -33,20 +33,32 @@
                                     <form action="{{ route('signup') }}" method="POST">
                                         @csrf
                                         <div class="edit-profile__body">
-                                            <div class="form-group mb-20">
-                                                <label for="name">Nombre</label>
-                                                <input type="text" class="form-control" name="name" id="name" placeholder="Nombre completo">
-                                                @if($errors->has('name'))
-                                                  <p class="text-danger">{{ $errors->first('name') }}</p>
-                                                @endif
+                                            <div class="row">
+                                                <div class="col-md-6">
+
+                                                    <div class="form-group mb-20">
+                                                        <label for="name">Usuario</label>
+                                                        <input type="text" class="form-control" name="name" id="name" placeholder="Usuario completo">
+                                                        @if($errors->has('name'))
+                                                            <p class="text-danger">{{ $errors->first('name') }}</p>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+
+                                                    <div class="form-group mb-20">
+                                                        <label for="email">Correo electrónico</label></label>
+                                                        <input type="text" class="form-control" id="email" name="email" placeholder="Email address">
+                                                        @if($errors->has('email'))
+                                                        <p class="text-danger">{{ $errors->first('email') }}</p>
+                                                        @endif
+                                                    </div>
+                                                </div>
+
                                             </div>
-                                            <div class="form-group mb-20">
-                                                <label for="email">Correo electrónico</label></label>
-                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email address">
-                                                @if($errors->has('email'))
-                                                  <p class="text-danger">{{ $errors->first('email') }}</p>
-                                                @endif
-                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6">
                                             <div class="form-group mb-15">
                                                 <label for="password-field">Contraseña</label>
                                                 <div class="position-relative">
@@ -57,7 +69,104 @@
                                                   <p class="text-danger">{{ $errors->first('password') }}</p>
                                                 @endif
                                             </div>
-                                            <div class="admin-condition">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-15">
+
+                                                <label for="tipo_usuario_id">Tipo de cuenta</label>
+                                                
+                                                <select class="js-example-basic-single js-states form-control" name="tipo_usuario_id" id="tipo_usuario_id" required>
+                                                <option value="" selected>Seleccione tipo de cuenta</option>
+
+                                                    <option value="1">Cliente</option>
+                                                    <option value="2">Franquisia</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-20">
+                                                        <label for="nombre">Nombre</label></label>
+                                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre..." required>
+        
+                                                    </div>
+                                                </div>   
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-20">
+                                                        <label for="apellido">Apellido</label></label>
+                                                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="apellido..." required>
+        
+                                                    </div>
+                                                </div>         
+             
+                                            </div>
+                       
+                                            <div class="row">
+                                                <div class="col-md-6">
+
+                                                <div class="form-group mb-10">
+                                                    <label for="calle">Calle</label></label>
+                                                    <input type="text" class="form-control" id="calle" name="calle" placeholder="calle..." required>
+    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="form-group mb-10">
+                                                    <label for="colonia">Colonia</label></label>
+                                                    <input type="text" class="form-control" id="colonia" name="colonia" placeholder="colonia..." required>
+    
+                                                </div>
+                                            </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-10">
+                                                        <label for="cp">Codigo Postal</label></label>
+                                                        <input type="text" class="form-control" id="cp" name="cp" placeholder="codigo postal..." required>
+        
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-10">
+                                                        <label for="ciudad">Ciudad</label></label>
+                                                        <select class="js-example-basic-single js-states form-control" name="ciudad" id="ciudad" required>
+                                                            <option value="" selected>Seleccione Ciudad</option>
+            
+                                                                <option value="1">Tijuana</option>
+                                                                <option value="2">Ensenada</option>
+                                                                <option value="3">Rosarito</option>
+                                                                <option value="4">Tecate</option>
+                                                                <option value="5">Mexicali</option>
+                                                                <option value="6">San Quintin</option>
+            
+                                                            </select>
+        
+                                                    </div>
+                                                </div>
+          
+             
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-20">
+                                                        <label for="telefono">Telefono</label></label>
+                                                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono..." required>
+        
+                                                    </div>
+                                                </div>          
+             
+                                            </div>
+ 
+                                            
+                                            {{-- <div class="admin-condition">
                                                 <div class="checkbox-theme-default custom-checkbox ">
                                                     <input class="checkbox" type="checkbox" id="check-1">
                                                     <label for="check-1">
@@ -66,7 +175,7 @@
                                                             mis prefencias</span>
                                                     </label>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="admin__button-group button-group d-flex pt-1 justify-content-md-start justify-content-center">
                                                 <button class="btn btn-primary btn-default w-100 btn-squared text-capitalize lh-normal px-50 signIn-createBtn ">
                                                     Crear cuenta
