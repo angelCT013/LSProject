@@ -34,7 +34,7 @@
                                         <h6 class="fw-500">Información sobre el producto</h6>
                                     </div>
                                     <div class="add-product__body px-sm-40 px-20">
-                                        <form>
+                                        {{-- <form>
                                             <div class="form-group">
                                                 <label for="name1">Nombre del producto</label>
                                                 <input type="text" class="form-control" id="name1" placeholder="red chair">
@@ -111,7 +111,62 @@
                                                 <label for="name9">Meta Keyword</label>
                                                 <input type="text" class="form-control" id="name9" placeholder="Meta keyword">
                                             </div> -->
+                                        </form> --}}
+                                        <form action="{{ route('ecommerce.add_product', app()->getLocale()) }}" method="post">
+                                            @csrf
+                                            <label for="nombre">Nombre</label>
+                                            <input type="text" name="nombre" id="nombre" required>
+                                            
+                                            <label for="numSerie">Número de Serie</label>
+                                            <input type="text" name="numSerie" id="numSerie">
+                                            
+                                            <label for="status_id">Estado</label>
+                                            <select name="status_id" id="status_id">
+                                                <option value="1">Activo</option>
+                                                <option value="2">Inactivo</option>
+                                                <option value="3">Baja</option>
+
+                                            </select>
+                                            
+                                            <label for="modelo_id">Modelo</label>
+                                            <select name="modelo_id" id="modelo_id">
+                                                <option value="1">Z Book</option>
+                                                <option value="2">ThinkPad</option>
+                                                <option value="3">MacBook Pro</option>
+                                                <option value="4">Galaxy Book</option>
+                                                <option value="5">XPS</option>
+                                                <option value="6">VAIO</option>
+                                                <option value="7">ROG</option>
+                                                <option value="8">Surface Laptop</option>
+                                                <option value="9">Satellite</option>
+                                                <option value="10">Gram</option>
+                                                <option value="11">Toughbook</option>
+                                                <option value="12">ThinkCentre</option>
+                                            </select>
+                                            
+                                            <label for="categoria_id">Categoría</label>
+                                            <select name="categoria_id" id="categoria_id">
+                                                <option value="1">Tecnologia</option>
+                                                <option value="2">Bebes</option>
+                                                <option value="3">Ropa</option>
+                                                <option value="4">Higiene</option>
+                                                <option value="5">Belleza</option>
+                                            </select>
+                                            
+                                            <label for="imagen">Imagen</label>
+                                            <input type="text" name="imagen" id="imagen">
+                                            
+                                            <label for="descripcion">Descripción</label>
+                                            <textarea name="descripcion" id="descripcion"></textarea>
+                                            
+                                            <button type="submit">Guardar Producto</button>
                                         </form>
+                                        @if(session('success'))
+                                            <div class="alert alert-success">
+                                                {{ session('success') }}
+                                            </div>
+                                        @endif
+
                                     </div>
                                 </div>
                             </div>

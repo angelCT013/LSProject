@@ -69,7 +69,7 @@
                                             </div>
                                             <div class="admin__button-group button-group d-flex pt-1 justify-content-md-start justify-content-center">
                                                 <button class="btn btn-primary btn-default w-100 btn-squared text-capitalize lh-normal px-50 signIn-createBtn ">
-                                                    Create Account
+                                                    Crear cuenta
                                                 </button>
                                             </div>
                                         </div>

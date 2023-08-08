@@ -18,6 +18,8 @@ use App\Http\Controllers\FilemanagerController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\BookmarkController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\ProductoController;
+
 
 /************************ Application Routes Start ******************************/
 Route::group(['middleware'=>'auth'],function(){
@@ -52,6 +54,9 @@ Route::group(['middleware'=>'auth'],function(){
                 Route::get('orders',[EcommerceController::class,'orders'])->name('orders');
                 Route::get('sellers',[EcommerceController::class,'sellers'])->name('sellers');
                 Route::get('invoice',[EcommerceController::class,'invoice'])->name('invoice');
+                Route::post('add-product', [ProductoController::class, 'addProducto'])->name('ecommerce.addProducto');
+
+
             });
         
             Route::group(['prefix'=>'social','as'=>'social.'],function(){
@@ -101,6 +106,8 @@ Route::group(['middleware'=>'auth'],function(){
             Route::get('bookmark',[BookmarkController::class,'index'])->name('bookmark'); 
             Route::get('support-ticket',[SupportController::class,'index'])->name('support_ticket');
             Route::get('support-details',[SupportController::class,'detail'])->name('support_detail');
+            
+
             
         });
     });    
