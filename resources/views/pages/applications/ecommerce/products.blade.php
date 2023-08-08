@@ -357,6 +357,7 @@
                             </span>
                             <a href="#"><img class="card-img-top img-fluid" src="{{ asset('assets/img/digital-chair.png') }}" alt="digital-chair"></a>
                         </div>
+
                         <div class="card-body px-20 pb-25 pt-25">
                             <div class="product-item__body text-capitalize">
                             <a href="{{ route('ecommerce.product_detail',app()->getLocale()) }}">
@@ -385,6 +386,8 @@
 
                             </div>
                         </div>
+
+
                         </div>
                     </div>
                     </div>
