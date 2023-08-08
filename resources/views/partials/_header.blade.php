@@ -11,6 +11,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style' . Helper::rlt_ext() . '.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/variables' . Helper::rlt_ext() . '.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app' . Helper::rlt_ext() . '.css') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/mls/logotype1-dark.png') }}">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
 </head>
