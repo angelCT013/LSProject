@@ -551,11 +551,11 @@
       </div>
       <div class="modal-body">
 
-      <form action="{{ route('ecommerce.products', app()->getLocale()) }}" method="post">
+        <form action="{{ route('ecommerce.products', app()->getLocale()) }}" method="post">
                                             @csrf
                                             <div class="form-group">
                                                 <label for="nombre">Nombre</label>
-                                                <input  class="form-control" type="text" name="nombre" id="idproducto" placeholder="Nombre producto..." hidden>
+                                                <input  class="form-control" type="hidden" name="idproducto" id="idproducto" >
                                                 <input  class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre producto..." required>
                                             </div>
                                             <div class="form-group">
@@ -614,7 +614,7 @@
                                             <input type="text" name="imagen" id="imagen"> --}}
 
 
-                                        </form>
+        </form>
 
       </div>
       <div class="modal-footer">
@@ -756,8 +756,8 @@
                 var productoid = dataSplit[0];
                 var nombre = dataSplit[1];
                 var numSerie = dataSplit[2];
-                var nmodelo = dataSplit[3];
-                var ncategoria = dataSplit[4];
+                var modeloid = dataSplit[3];
+                var categoriaid = dataSplit[4];
                 var status = dataSplit[5];
                 var descripcion = dataSplit[6];
 

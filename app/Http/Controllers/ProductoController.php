@@ -32,6 +32,7 @@ class ProductoController extends Controller
     }
     public function updateProducto(Request $request)
 {
+    // dd($request->all());
     // Obtener los datos del formulario
     $producto_id = $request->input('idproducto');
     $nombre = $request->input('nombre');
@@ -44,12 +45,14 @@ class ProductoController extends Controller
     $descripcion = $request->input('descripcion');
 
     // Llamar al procedimiento almacenado para actualizar el producto
-    \DB::statement("CALL sp_actualizar_producto(?, ?, ?, ?, ?, ?, ?, ?)",
+    \DB::statement("CALL actualizar_producto(?, ?, ?, ?, ?, ?, ?, ?)",
         [$producto_id, $nombre, $numSerie, $status_id, $modelo_id, $categoria_id, $imagen, $descripcion]
     );
 
     // Redirigir a la vista con un mensaje de éxito
-    return redirect()->route('ecommerce.products', ['locale' => app()->getLocale(), 'id' => $producto_id])->with('success', 'Producto actualizado exitosamente.');
+    // return redirect()->route('ecommerce.products', ['locale' => app()->getLocale(), 'id' => $producto_id])->with('success', 'Producto actualizado exitosamente.');
+    return redirect()->route('ecommerce.products',app()->getLocale())->with('success', 'Producto actualizado exitosamente.');
+
 }
 
 }
