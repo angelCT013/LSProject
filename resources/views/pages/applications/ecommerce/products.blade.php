@@ -484,23 +484,18 @@
                                         <span class="userDatatable-title">Producto</span>
                                     </th>
                                     <th>
-                                        <span class="userDatatable-title">Direccion</span>
+                                        <span class="userDatatable-title">numSerie</span>
                                     </th>
                                     <th>
-                                        <span class="userDatatable-title">Tienda</span>
+                                        <span class="userDatatable-title">modelo</span>
                                     </th>
                                     <th>
-                                        <span class="userDatatable-title">Precio</span>
-                                    </th>
-                                    <th>
-                                        <span class="userDatatable-title">Stock</span>
-                                    </th>
-                                    <th>
-                                        <span class="userDatatable-title">Estatus</span>
+                                        <span class="userDatatable-title">categoria</span>
                                     </th>
                                     <th class="actions">
                                         <span class="userDatatable-title">Actions</span>
                                     </th>
+
                                 </tr>
                             </thead>
                             <tbody class='tbody'>
@@ -565,17 +560,8 @@
                     var producto_id = valor.producto_id;
                     var nombre = valor.nombre;
                     var numSerie = valor.numSerie;
-                    var status = valor.status_id;
-                    var imagen = valor.imange;
-                    var descripcion = valor.descripcion;
-                    var nCategoria = valor.categoria;
-                    var calle = valor.calle;
-                    var colonia = valor.colonia;
-                    var nstatus = valor.estatus;
                     var nmodelo = valor.modelo;
-                    var franquicia = valor.franquicia;
-                    var precio = valor.precio;
-                    var stock = valor.stock;
+                    var ncategoria= valor.categoria;
 
                     var html =    '<tr>'
                                     +'<td>'
@@ -589,29 +575,20 @@
                                     +'</td>'
                                     +'<td>'
                                         +'<div class="userDatatable-content--subject">'
-                                              +'<h6>'+colonia+'</h6>'
+                                              +'<h6>'+numSerie+'</h6>'
                                         +'</div>'
                                     +'</td>'
                                     +'<td>'
                                         +'<div class="userDatatable-content--subject">'
-                                            +'<h6>'+franquicia+'</h6>'
+                                            +'<h6>'+nmodelo+'</h6>'
                                         +'</div>'
                                     +'</td>'
                                     +'<td>'
                                         +'<div class="userDatatable-content--priority">'
-                                            +'<h6>'+precio+'</h6>'
+                                            +'<h6>'+ncategoria+'</h6>'
                                         +'</div>'
                                     +'</td>'
-                                    +'<td>'
-                                        +'<div class="userDatatable-content--priority">'
-                                             +'<h6>'+stock+'</h6>'
-                                        +'</div>'
-                                    +'</td>'
-                                    +'<td>'
-                                        +'<div class="userDatatable-content d-inline-block">'
-                                            +'<span class="bg-opacity-success  color-success userDatatable-content-status active">Activo</span>'
-                                       +'</div>'
-                                    +'</td>'
+
                                     +'<td>'
                                         +'<ul class="orderDatatable_actions mb-0 d-flex flex-wrap">'
                                             +'<li>'
