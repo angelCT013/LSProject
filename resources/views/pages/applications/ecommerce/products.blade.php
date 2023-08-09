@@ -551,11 +551,73 @@
       </div>
       <div class="modal-body">
 
+      <form action="{{ route('ecommerce.add_product', app()->getLocale()) }}" method="post">
+                                            @csrf
+                                            <div class="form-group">
+                                                <label for="nombre">Nombre</label>
+                                                <input  class="form-control" type="text" name="nombre" id="idproducto" placeholder="Nombre producto..." hidden>
+                                                <input  class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre producto..." required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="numSerie">Número de Serie</label>
+                                                <input  class="form-control" type="text" name="numSerie" id="numSerie" placeholder="Número de serie del producto..." required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="status_id">Estado</label>
+                                                <select class="js-example-basic-single js-states form-control" name="status_id" id="status_id" required>
+                                                    <option value="1">Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                    <option value="3">Baja</option>
 
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+
+                                            <label for="modelo_id">Modelo</label>
+                                            <select class="js-example-basic-single js-states form-control" name="modelo_id" id="modelo_id" required>
+                                                <option value="" id="opModelo" selected>Seleccionar Modelo</option>
+                                                <option value="1">Z Book</option>
+                                                <option value="2">ThinkPad</option>
+                                                <option value="3">MacBook Pro</option>
+                                                <option value="4">Galaxy Book</option>
+                                                <option value="5">XPS</option>
+                                                <option value="6">VAIO</option>
+                                                <option value="7">ROG</option>
+                                                <option value="8">Surface Laptop</option>
+                                                <option value="9">Satellite</option>
+                                                <option value="10">Gram</option>
+                                                <option value="11">Toughbook</option>
+                                                <option value="12">ThinkCentre</option>
+                                            </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="categoria_id">Categoría</label>
+                                                <select class="js-example-basic-single js-states form-control" name="categoria_id" id="categoria_id" required>
+                                                    <option value="" selected>Seleccionar Categoria</option>
+                                                    <option value="1">Tecnologia</option>
+                                                    <option value="2">Bebes</option>
+                                                    <option value="3">Ropa</option>
+                                                    <option value="4">Higiene</option>
+                                                    <option value="5">Belleza</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+
+                                            <label for="descripcion">Descripción</label>
+                                            <textarea class="form-control" rows="3" name="descripcion" id="descripcion" placeholder="Descripcion producto..." required></textarea>
+                                            </div>
+
+                                            <button class="btn btn-primary btn-default btn-squared text-capitalize" type="submit">Guardar Producto</button>
+
+
+                                            {{-- <label for="imagen">Imagen</label>
+                                            <input type="text" name="imagen" id="imagen"> --}}
+
+
+                                        </form>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="Guardar()">Guardar</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeModal()">Cerrar</button>
 
     </div>
@@ -566,6 +628,16 @@
         <script type='text/javascript'>
         var modalEnlazar = document.getElementById('ModalEnlazar');
 
+        var nombreE= document.getElementById('nombre');
+        var numserieE = document.getElementById('numSerie');
+        var descripcionE = document.getElementById('descripcion');
+
+        var modeloid = document.getElementById('modelo_id');
+        var categoriaid = document.getElementById('categoria_id');
+        var statusid = document.getElementById('status_id');
+        var idproducto = document.getElementById('idproducto');
+
+        idproducto
 
          $(document).ready(function(){
             productos();
@@ -585,6 +657,12 @@
                     var numSerie = valor.numSerie;
                     var nmodelo = valor.modelo;
                     var ncategoria= valor.categoria;
+                    var status = valor.status_id;
+                    var descripcion = valor.descripcion;
+                    var modeloid = valor.modelo_id;
+                    var cateogoriaid = valor.categoria_id;
+
+                    var data = producto_id +'||'+ nombre +'||'+ numSerie +'||'+ nmodelo +'||'+ ncategoria +'||'+ status +'||'+ descripcion +'||'+modeloid+'||'+cateogoriaid;
 
                     var html =    '<tr>'
                                     +'<td>'
@@ -616,8 +694,7 @@
                                         +'<ul class="orderDatatable_actions mb-0 d-flex flex-wrap">'
                                             +'<li>'
                                                 +'<a href="#" class="edit">'
-                                                    +'<i class="uil uil-edit" onclick="editar('+producto_id+')"></i>'
-                                                +'</a>'
+                                                +'<i class="uil uil-edit" onclick="editar(\''+data+'\')"></i>'                                                +'</a>'
                                             +'</li>'
                                             +'<li>'
                                                 +'<a href="#" class="remove" onclick="borrar('+producto_id+')">'
@@ -640,8 +717,27 @@
          }
 
          function editar(data){
-                console.log('data '+data);
                 $(modalEnlazar).modal('show');
+                var dataSplit = data.split('||');
+                var productoid = dataSplit[0];
+                var nombre = dataSplit[1];
+                var numSerie = dataSplit[2];
+                var nmodelo = dataSplit[3];
+                var ncategoria = dataSplit[4];
+                var status = dataSplit[5];
+                var descripcion = dataSplit[6];
+
+                idproducto.value = productoid;
+                nombreE.value = nombre;
+                numserieE.value = numSerie;
+                descripcionE.value = descripcion;
+                modeloid.value = modeloid;
+                categoriaid.value = categoriaid;
+                statusid.value = status;
+
+
+
+
 
          }
 
