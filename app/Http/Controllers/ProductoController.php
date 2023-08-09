@@ -30,9 +30,10 @@ class ProductoController extends Controller
 
         // return redirect()->back()->with('success', 'Producto agregado exitosamente.');
     }
-    public function updateProducto(Request $request, $producto_id)
+    public function updateProducto(Request $request)
 {
     // Obtener los datos del formulario
+    $producto_id = $request->input('idproducto');
     $nombre = $request->input('nombre');
     $numSerie = $request->input('numSerie');
     $status_id = $request->input('status_id');

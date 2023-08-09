@@ -55,6 +55,7 @@ Route::group(['middleware'=>'auth'],function(){
                 Route::get('sellers',[EcommerceController::class,'sellers'])->name('sellers');
                 Route::get('invoice',[EcommerceController::class,'invoice'])->name('invoice');
                 Route::post('add-product', [ProductoController::class, 'addProducto'])->name('ecommerce.addProducto');
+                Route::post('products', [ProductoController::class, 'updateProducto'])->name('ecommerce.products');
                 // Route::post('add-product', [ProductoController::class, 'addProducto'])->name('ecommerce.addProducto');
 
 

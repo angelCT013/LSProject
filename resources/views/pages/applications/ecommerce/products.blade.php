@@ -551,7 +551,7 @@
       </div>
       <div class="modal-body">
 
-      <form action="{{ route('ecommerce.add_product', app()->getLocale()) }}" method="post">
+      <form action="{{ route('ecommerce.products', app()->getLocale()) }}" method="post">
                                             @csrf
                                             <div class="form-group">
                                                 <label for="nombre">Nombre</label>
