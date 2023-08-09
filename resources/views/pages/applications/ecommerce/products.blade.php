@@ -695,7 +695,17 @@
                     var descripcion = valor.descripcion;
                     var modeloid = valor.modelo_id;
                     var cateogoriaid = valor.categoria_id;
-
+                    let dataObj={
+                        producto_id: producto_id,
+                        nombre: nombre,
+                        numSerie: numSerie,
+                        nmodelo: nmodelo,
+                        ncategoria: ncategoria,
+                        status: status,
+                        descripcion: descripcion,
+                        modeloid: modeloid,
+                        cateogoriaid: cateogoriaid,
+                        }
                     var data = producto_id +'||'+ nombre +'||'+ numSerie +'||'+ nmodelo +'||'+ ncategoria +'||'+ status +'||'+ descripcion +'||'+modeloid+'||'+cateogoriaid;
                     var data2 = producto_id +'||'+ nombre;
                     var html =    '<tr>'
@@ -756,17 +766,57 @@
                 var productoid = dataSplit[0];
                 var nombre = dataSplit[1];
                 var numSerie = dataSplit[2];
-                var modeloid = dataSplit[3];
-                var categoriaid = dataSplit[4];
+                // var modelo_id = dataSplit[7];
+                // var categoriaid = dataSplit[8];
                 var status = dataSplit[5];
                 var descripcion = dataSplit[6];
+                // console.log(dataSplit);
+                // console.log(data);
+                // console.log(dataSplit[7]);
+                // console.log(dataSplit[8]);
+                // console.log(modeloid);
+                // console.log(categoriaid);
+
+                var modelo_id = dataSplit[7];
+
+                // Obtén el elemento select por su id
+                var selectElement = document.getElementById("modelo_id");
+
+                // Recorre las opciones del select
+                for (var i = 0; i < selectElement.options.length; i++) {
+                    var option = selectElement.options[i];
+
+                    // Compara el valor de la opción con el valor que deseas seleccionar
+                    if (option.value == modelo_id) {
+                        // Establece la opción como seleccionada
+                        option.selected = true;
+                        break; // Rompe el bucle una vez que encuentres la opción correcta
+                    }
+                }
+                var categoria_id = dataSplit[8];
+
+                // Obtén el elemento select por su id
+                var selectElement = document.getElementById("categoria_id");
+
+                // Recorre las opciones del select
+                for (var i = 0; i < selectElement.options.length; i++) {
+                    var option = selectElement.options[i];
+
+                    // Compara el valor de la opción con el valor que deseas seleccionar
+                    if (option.value == categoria_id) {
+                        // Establece la opción como seleccionada
+                        option.selected = true;
+                        break; // Rompe el bucle una vez que encuentres la opción correcta
+                    }
+                }
+
 
                 idproducto.value = productoid;
                 nombreE.value = nombre;
                 numserieE.value = numSerie;
                 descripcionE.value = descripcion;
-                modeloid.value = modeloid;
-                categoriaid.value = categoriaid;
+                // modeloid.value = modeloid;
+                // categoriaid.value = categoriaid;
                 statusid.value = status;
                 neditar1.innerHTML = nombre;
 
