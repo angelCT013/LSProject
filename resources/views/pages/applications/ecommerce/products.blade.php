@@ -540,11 +540,11 @@
             </div>
         </div>
 
-        <div class="modal fade" id="ModalEnlazar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="ModalEnlazar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modaltitle">Enlazar empresas</h5>
+        <p class="modal-title" id="modaltitle">Editar producto: <h3 id="neditar1">a</h3></p>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -607,7 +607,7 @@
                                             <textarea class="form-control" rows="3" name="descripcion" id="descripcion" placeholder="Descripcion producto..." required></textarea>
                                             </div>
 
-                                            <button class="btn btn-primary btn-default btn-squared text-capitalize" type="submit">Guardar Producto</button>
+                                            <button class="btn btn-primary btn-default btn-squared text-capitalize" type="submit">Editar Producto</button>
 
 
                                             {{-- <label for="imagen">Imagen</label>
@@ -623,10 +623,41 @@
     </div>
     </div>
   </div>
+
 </div>
+
+
+
+<div class="modal fade" id="ModalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title" id="modaltitle">Eliminar producto: <h4 id="neditar">a</h4></p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      <form action="{{ route('ecommerce.add_product', app()->getLocale()) }}" method="post">
+
+                @csrf
+                <input  class="form-control" type="text" name="nombre" id="idproducto2" placeholder="Nombre producto..." hidden>
+
+            <button class="btn btn-primary btn-default btn-squared text-capitalize" type="submit">Eliminar Producto</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
 
         <script type='text/javascript'>
         var modalEnlazar = document.getElementById('ModalEnlazar');
+        var ModalEliminar = document.getElementById('ModalEliminar');
 
         var nombreE= document.getElementById('nombre');
         var numserieE = document.getElementById('numSerie');
@@ -637,7 +668,10 @@
         var statusid = document.getElementById('status_id');
         var idproducto = document.getElementById('idproducto');
 
-        idproducto
+        var idproducto2 = document.getElementById('idproducto2');
+        var tneditar = document.getElementById('neditar');
+        var tneditar1 = document.getElementById('neditar1');
+
 
          $(document).ready(function(){
             productos();
@@ -663,7 +697,7 @@
                     var cateogoriaid = valor.categoria_id;
 
                     var data = producto_id +'||'+ nombre +'||'+ numSerie +'||'+ nmodelo +'||'+ ncategoria +'||'+ status +'||'+ descripcion +'||'+modeloid+'||'+cateogoriaid;
-
+                    var data2 = producto_id +'||'+ nombre;
                     var html =    '<tr>'
                                     +'<td>'
                                         +'<div class="d-flex">'
@@ -697,7 +731,7 @@
                                                 +'<i class="uil uil-edit" onclick="editar(\''+data+'\')"></i>'                                                +'</a>'
                                             +'</li>'
                                             +'<li>'
-                                                +'<a href="#" class="remove" onclick="borrar('+producto_id+')">'
+                                                +'<a href="#" class="remove" onclick="borrar(\''+data2+'\')">'
                                                     +'<i class="uil uil-trash-alt"></i>'
                                                 +'</a>'
                                             +'</li>'
@@ -734,15 +768,19 @@
                 modeloid.value = modeloid;
                 categoriaid.value = categoriaid;
                 statusid.value = status;
-
+                neditar1.innerHTML = nombre;
 
 
 
 
          }
 
-         function borrar(id){
-                console.log('id '+id);
+         function borrar(data2){
+            var dataSplit = data2.split('||');
+            idproducto2.value = dataSplit[0];
+            tneditar.innerHTML = dataSplit[1];
+            $(ModalEliminar).modal('show');
+
          }
 
          function closeModal(){
