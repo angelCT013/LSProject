@@ -535,6 +535,19 @@
                             <div>
                                 @if(Auth::check())
                                     <h6 class="text-capitalize">{{ Auth::user()->name }}</h6>
+                                    @switch(session('rol'))
+                                        @case(3)
+                                        <h3>Administrador</h3>
+                                            @break
+                                        @case(2)
+                                        <h3>Franquicia</h3>
+                                            
+                                            @break
+                                        @default
+                                        <h3>Cliente</h3>
+                                            
+                                    @endswitch
+                                    {{-- <h3>{{ session('rol') }}</h3> --}}
                                 @endif
                                 <span>UI Designer</span>
                             </div>
@@ -581,3 +594,4 @@
         </div>
     </div>
 </nav>
+

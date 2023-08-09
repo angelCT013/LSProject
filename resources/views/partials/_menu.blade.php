@@ -19,6 +19,9 @@
                 <li><a href="{{ route('ecommerce.add_product',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/ecommerce/add-product') ? 'active':'' }}">{{ trans('menu.ecommerce-product-add') }}</a></li>
             </ul>
         </li>
+        {{-- {{ session('rol') }} --}}
+        @if(session('rol')==3)
+
         <li class="has-child {{ Request::is(app()->getLocale().'/applications/user/*') ? 'open':'' }}">
             <a href="#" class="{{ Request::is(app()->getLocale().'/applications/user/*') ? 'active':'' }}">
                 <span class="nav-icon uil uil-users-alt"></span>
@@ -29,5 +32,6 @@
                 <li><a href="{{ route('user.table',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/user/table') ? 'active':'' }}">{{ trans('menu.user-table') }}</a></li>
             </ul>
         </li>
+        @endif
     </ul>
 </div>

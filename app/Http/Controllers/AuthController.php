@@ -73,6 +73,11 @@ class AuthController extends Controller {
             $user->direccion_id = $direccionId;
             $user->save();
             auth()->login($user);
+            // Autenticación exitosa, obtenemos el usuario autenticado
+            $user = Auth::user();
+
+            // Almacenamos el valor de tipo_de_usuario_id en una variable de sesión llamada 'rol'
+            session(['rol' => $user->tipo_de_usuario_id]);
             return redirect()->intended(route('dashboard.demo_one','en'))->with('message','Registration was successfull !');
         }
             // } else {
@@ -114,6 +119,11 @@ class AuthController extends Controller {
             return redirect()->route('login')->withErrors($validators)->withInput();
         }else{
             if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
+            // Autenticación exitosa, obtenemos el usuario autenticado
+            $user = Auth::user();
+
+            // Almacenamos el valor de tipo_de_usuario_id en una variable de sesión llamada 'rol'
+            session(['rol' => $user->tipo_de_usuario_id]);
                 return redirect()->intended(route('dashboard.demo_one','es'))->with('message','Bienvenido!');
             }else{
                 return redirect()->route('login')->with('message','Error !Email/Password son incorrectas !');
