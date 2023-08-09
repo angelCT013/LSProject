@@ -20,7 +20,8 @@ use App\Http\Controllers\usuariosController;
 */
 
 Route::group(['middleware'=>'guest'],function(){
-    Route::get('/',[AuthController::class,'login'])->name('login');
+    Route::get('/',[AuthController::class,'land'])->name('land');
+    Route::get('/login',[AuthController::class,'login'])->name('login');
     Route::get('/register',[AuthController::class,'register'])->name('register');
     Route::get('/forget-password',[AuthController::class,'forgetPassword'])->name('forget_password');
     Route::post('/authenticate',[AuthController::class,'authenticate'])->name('authenticate');

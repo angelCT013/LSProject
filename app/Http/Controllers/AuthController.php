@@ -19,6 +19,11 @@ class AuthController extends Controller {
         $description = "Some description for the page";
         return view('auth.login',compact('title','description'));
     }
+    public function land(){
+        $title = "Landpage";
+        $description = "Some description for the page";
+        return view('auth.land',compact('title','description'));
+    }
 
     /**
      * Display register of the resource.
