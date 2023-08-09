@@ -11,11 +11,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Productos extends Model
 {
-    protected $table = 'vProductos2';
+    protected $table = 'vProductos';
     protected $primaryKey = 'producto_id';
     public $timestamps = true;
 
     // Relación con la tabla 'categoria'
- 
+
 }
 
