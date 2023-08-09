@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light">
     <div class="navbar-left">
         <div class="logo-area">
-            <a class="navbar-brand" href="{{ route('dashboard.demo_one',app()->getLocale()) }}">
+            <a class="navbar-brand" href="{{ route('dashboard.landpage',app()->getLocale()) }}">
             <img class="dark" src="{{ asset('assets/img/mls/logotype3-dark.svg') }}" alt="">
             <img class="light" src="{{ asset('assets/img/mls/logotype3-white.png') }}" alt="" heigth="">
             </a>
@@ -15,7 +15,7 @@
                     <li class="has-subMenu">
                         <a href="#" class="{{ Request::is(app()->getLocale().'/dashboards/*') ? 'active':'' }}">Dashboard</a>
                         <ul class="subMenu">
-                            <li><a class="{{ Request::is(app()->getLocale().'/dashboards/demo-one') ? 'active':'' }}" href="{{ route('dashboard.demo_one',app()->getLocale()) }}">{{ trans('menu.dashboard-demo-one') }}</a></li>
+                            <li><a class="{{ Request::is(app()->getLocale().'/dashboards/landpage') ? 'active':'' }}" href="{{ route('dashboard.landpage',app()->getLocale()) }}">{{ trans('menu.dashboard-landpage') }}</a></li>
                             <li><a class="{{ Request::is(app()->getLocale().'/dashboards/demo-two') ? 'active':'' }}" href="{{ route('dashboard.demo_two',app()->getLocale()) }}">{{ trans('menu.dashboard-demo-two') }}</a></li>
                             <li><a class="{{ Request::is(app()->getLocale().'/dashboards/demo-three')  ? 'active':'' }}" href="{{ route('dashboard.demo_three',app()->getLocale()) }}">{{ trans('menu.dashboard-demo-three') }}</a></li>
                             <li><a class="{{ Request::is(app()->getLocale().'/dashboards/demo-four')  ? 'active':'' }}" href="{{ route('dashboard.demo_four',app()->getLocale()) }}">{{ trans('menu.dashboard-demo-four') }}</a></li>

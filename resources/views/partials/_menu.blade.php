@@ -16,7 +16,10 @@
             </a>
             <ul>
                 <li><a href="{{ route('ecommerce.products',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/ecommerce/products') ? 'active':'' }}">{{ trans('menu.ecommerce-products') }}</a></li>
+                @if(session('rol')==3 ||session('rol')==2)
                 <li><a href="{{ route('ecommerce.add_product',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/ecommerce/add-product') ? 'active':'' }}">{{ trans('menu.ecommerce-product-add') }}</a></li>
+                @endif
+ 
             </ul>
         </li>
         {{-- {{ session('rol') }} --}}

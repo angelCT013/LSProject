@@ -78,7 +78,7 @@ class AuthController extends Controller {
 
             // Almacenamos el valor de tipo_de_usuario_id en una variable de sesión llamada 'rol'
             session(['rol' => $user->tipo_de_usuario_id]);
-            return redirect()->intended(route('dashboard.demo_one','en'))->with('message','Registration was successfull !');
+            return redirect()->intended(route('dashboard.landpage','en'))->with('message','Registration was successfull !');
         }
             // } else {
             //     // dd($request->all()); // Agrega esta línea
@@ -101,7 +101,7 @@ class AuthController extends Controller {
             //     ]);
 
             //     // Redirigir al usuario
-            //     return redirect()->intended(route('dashboard.demo_one', 'en'))->with('message', 'Registration was successful!');
+            //     return redirect()->intended(route('dashboard.landpage', 'en'))->with('message', 'Registration was successful!');
             // }
     }
 
@@ -124,7 +124,7 @@ class AuthController extends Controller {
 
             // Almacenamos el valor de tipo_de_usuario_id en una variable de sesión llamada 'rol'
             session(['rol' => $user->tipo_de_usuario_id]);
-                return redirect()->intended(route('dashboard.demo_one','es'))->with('message','Bienvenido!');
+                return redirect()->intended(route('dashboard.landpage','es'))->with('message','Bienvenido!');
             }else{
                 return redirect()->route('login')->with('message','Error !Email/Password son incorrectas !');
             }

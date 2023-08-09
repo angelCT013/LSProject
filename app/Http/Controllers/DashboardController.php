@@ -12,9 +12,9 @@ class DashboardController extends Controller {
      * @return \Illuminate\View\View
      */
     public function index(){
-        $title = "Dashboard Demo One";
-        $description = "Some description for the page";
-        return view('pages.dashboard.demo_one',compact('title','description'));
+        $title = "LandPage";
+        $description = "Pagina de inicio";
+        return view('pages.dashboard.landpage',compact('title','description'));
     }
 
     /**
