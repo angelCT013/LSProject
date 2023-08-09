@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/mls/logotype1-dark.png') }}">
 </head>
+
 <body>
     <main class="main-content">
         <div class="admin" style="background-image:url({{ asset('assets/img/admin-bg-light.png') }});">
@@ -40,7 +42,7 @@
                                                         <label for="name">Usuario</label>
                                                         <input type="text" class="form-control" name="name" id="name" placeholder="Usuario completo">
                                                         @if($errors->has('name'))
-                                                            <p class="text-danger">{{ $errors->first('name') }}</p>
+                                                        <p class="text-danger">{{ $errors->first('name') }}</p>
                                                         @endif
                                                     </div>
                                                 </div>
@@ -59,35 +61,35 @@
 
                                             <div class="row">
                                                 <div class="col-md-6">
-                                            <div class="form-group mb-15">
-                                                <label for="password-field">Contraseña</label>
-                                                <div class="position-relative">
-                                                    <input id="password-field" type="password" class="form-control" name="password" placeholder="Password">
-                                                    <span toggle="#password-field" class="uil uil-eye-slash text-lighten fs-15 field-icon toggle-password2"></span>
+                                                    <div class="form-group mb-15">
+                                                        <label for="password-field">Contraseña</label>
+                                                        <div class="position-relative">
+                                                            <input id="password-field" type="password" class="form-control" name="password" placeholder="Password">
+                                                            <span toggle="#password-field" class="uil uil-eye-slash text-lighten fs-15 field-icon toggle-password2"></span>
+                                                        </div>
+                                                        @if($errors->has('password'))
+                                                        <p class="text-danger">{{ $errors->first('password') }}</p>
+                                                        @endif
+                                                    </div>
                                                 </div>
-                                                @if($errors->has('password'))
-                                                  <p class="text-danger">{{ $errors->first('password') }}</p>
-                                                @endif
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-15">
+
+                                                        <label for="tipo_usuario_id">Tipo de cuenta</label>
+
+                                                        <select class="js-example-basic-single js-states form-control" name="tipo_usuario_id" id="tipo_usuario_id" required>
+                                                            <option value="" selected>Seleccione tipo de cuenta</option>
+
+                                                            <option value="1">Cliente</option>
+                                                            <option value="2">Franquisia</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
+
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group mb-15">
-
-                                                <label for="tipo_usuario_id">Tipo de cuenta</label>
-
-                                                <select class="js-example-basic-single js-states form-control" name="tipo_usuario_id" id="tipo_usuario_id" required>
-                                                <option value="" selected>Seleccione tipo de cuenta</option>
-
-                                                    <option value="1">Cliente</option>
-                                                    <option value="2">Franquisia</option>
-
-                                                </select>
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
 
                                             <div class="row">
                                                 <div class="col-md-6">
@@ -110,20 +112,20 @@
                                             <div class="row">
                                                 <div class="col-md-6">
 
-                                                <div class="form-group mb-10">
-                                                    <label for="calle">Calle</label></label>
-                                                    <input type="text" class="form-control" id="calle" name="calle" placeholder="calle..." required>
+                                                    <div class="form-group mb-10">
+                                                        <label for="calle">Calle</label></label>
+                                                        <input type="text" class="form-control" id="calle" name="calle" placeholder="calle..." required>
 
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6">
+                                                <div class="col-md-6">
 
-                                                <div class="form-group mb-10">
-                                                    <label for="colonia">Colonia</label></label>
-                                                    <input type="text" class="form-control" id="colonia" name="colonia" placeholder="colonia..." required>
+                                                    <div class="form-group mb-10">
+                                                        <label for="colonia">Colonia</label></label>
+                                                        <input type="text" class="form-control" id="colonia" name="colonia" placeholder="colonia..." required>
 
+                                                    </div>
                                                 </div>
-                                            </div>
 
                                             </div>
                                             <div class="row">
@@ -136,18 +138,18 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-10">
-                                                        <label for="ciudad">Ciudad</label></label>
-                                                        <select class="js-example-basic-single js-states form-control" name="ciudad" id="ciudad" required>
+                                                        <label for="ciudad_id">Ciudad</label></label>
+                                                        <select class="js-example-basic-single js-states form-control" name="ciudad_id" id="ciudad_id" required>
                                                             <option value="" selected>Seleccione Ciudad</option>
 
-                                                                <option value="1">Tijuana</option>
-                                                                <option value="2">Ensenada</option>
-                                                                <option value="3">Rosarito</option>
-                                                                <option value="4">Tecate</option>
-                                                                <option value="5">Mexicali</option>
-                                                                <option value="6">San Quintin</option>
+                                                            <option value="1">Tijuana</option>
+                                                            <option value="2">Ensenada</option>
+                                                            <option value="3">Rosarito</option>
+                                                            <option value="4">Tecate</option>
+                                                            <option value="5">Mexicali</option>
+                                                            <option value="6">San Quintin</option>
 
-                                                            </select>
+                                                        </select>
 
                                                     </div>
                                                 </div>
@@ -187,7 +189,7 @@
 
                                 <div class="admin-topbar">
                                     <p class="mb-0">
-                                    ¿Tienes una cuenta?
+                                        ¿Tienes una cuenta?
                                         <a href="{{ route('login') }}" class="color-primary">
                                             Iniciase sesión
                                         </a>
@@ -222,4 +224,5 @@
     <script src="{{ asset('assets/js/plugins.min.js') }}"></script>
     <script src="{{ asset('assets/js/script.min.js') }}"></script>
 </body>
+
 </html>

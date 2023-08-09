@@ -55,38 +55,49 @@ class AuthController extends Controller {
         ]);
         if($validators->fails()){
             return redirect()->route('register')->withErrors($validators)->withInput();
-        // }else{
-        //     $user = new User();
-        //     $user->name = $request->name;
-        //     $user->email = $request->email;
-        //     $user->password = bcrypt($request->password);
-        //     $user->save();
-        //     auth()->login($user);
-        //     return redirect()->intended(route('dashboard.demo_one','en'))->with('message','Registration was successfull !');
-        // }
-    } else {
-        // dd($request->all()); // Agrega esta línea
-        // Llamar al stored procedure pasando los datos del usuario
-        DB::statement("CALL sp_alta_usuario(?, ?, ?, ?, ?, ?, ?, ?)", [
-            $request->calle,
-            $request->colonia,
-            $request->cp,
-            $request->ciudad_id,
-            $request->name,
-            $request->apellido, // Aquí estaba usando $request->apellido en lugar de $request->apellido
-            $request->email,
-            bcrypt($request->password),
-        ]);
+        }else{
+            // $direccion = new direccion();
+              // Crear una nueva dirección y obtener su ID
+            $direccionId = DB::table('direccion')->insertGetId([
+                'calle' => $request->calle,
+                'colonia' => $request->colonia,
+                'codigo_postal' => $request->cp,
+                'ciudad_id' => $request->ciudad_id
+            ]);
+            $user = new User();
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->lastname = $request->apellido;
+            $user->tipo_de_usuario_id = $request->tipo_usuario_id;
+            $user->password = bcrypt($request->password);
+            $user->direccion_id = $direccionId;
+            $user->save();
+            auth()->login($user);
+            return redirect()->intended(route('dashboard.demo_one','en'))->with('message','Registration was successfull !');
+        }
+            // } else {
+            //     // dd($request->all()); // Agrega esta línea
+            //     // Llamar al stored procedure pasando los datos del usuario
+            //     DB::statement("CALL sp_alta_usuario(?, ?, ?, ?, ?, ?, ?, ?)", [
+            //    $request->calle,
+            //    $request->colonia,
+            //    $request->cp,
+            //    $request->ciudad_id,
+            //    $request->name,
+            //    $request->apellido,
+            //    $request->email,
+            //        bcrypt($request->password),
+            //     ]);
 
-        // Realizar el login
-        auth()->attempt([
-            'email' => $request->email,
-            'password' => $request->password,
-        ]);
+            //     // Realizar el login
+            //     auth()->attempt([
+            //         'email' => $request->email,
+            //         'password' => $request->password,
+            //     ]);
 
-        // Redirigir al usuario
-        return redirect()->intended(route('dashboard.demo_one', 'en'))->with('message', 'Registration was successful!');
-    }
+            //     // Redirigir al usuario
+            //     return redirect()->intended(route('dashboard.demo_one', 'en'))->with('message', 'Registration was successful!');
+            // }
     }
 
     /**
@@ -108,7 +119,7 @@ class AuthController extends Controller {
                 return redirect()->route('login')->with('message','Error !Email/Password son incorrectas !');
             }
         }
-      
+
     }
 
     /**

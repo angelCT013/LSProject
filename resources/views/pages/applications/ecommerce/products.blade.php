@@ -445,7 +445,6 @@
 
 
                 </div> --}}
-                <!-- End of Pagination-->
                 </div>
             </div>
             </div>
@@ -506,15 +505,15 @@
                             </thead>
                             <tbody class='tbody'>
 
-                                
 
 
-                                
+
+
 
                             </tbody>
                         </table>
                     </div>
-                    <div class="d-flex justify-content-end pt-30">
+                    <!-- <div class="d-flex justify-content-end pt-30">
                         <nav class="dm-page ">
                             <ul class="dm-pagination d-flex">
                                 <li class="dm-pagination__item">
@@ -539,7 +538,7 @@
                                 </li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -577,7 +576,7 @@
                     var franquicia = valor.franquicia;
                     var precio = valor.precio;
                     var stock = valor.stock;
-                  
+
                     var html =    '<tr>'
                                     +'<td>'
                                         +'<div class="d-flex">'
@@ -632,9 +631,9 @@
                                             +'</li>'
                                         +'</ul>'
                                     +'</td>'
-                                +'</tr>';  
+                                +'</tr>';
 
-                                $(html).appendTo(tbody);        
+                                $(html).appendTo(tbody);
 
 
                 })
@@ -648,5 +647,5 @@
 
 
 
-      
+
 @endsection
