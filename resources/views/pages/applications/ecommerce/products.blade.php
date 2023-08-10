@@ -698,6 +698,28 @@
                 
                     var data = producto_id +'||'+ nombre +'||'+ numSerie +'||'+ nmodelo +'||'+ ncategoria +'||'+ status +'||'+ descripcion +'||'+modeloid+'||'+cateogoriaid;
                     var data2 = producto_id +'||'+ nombre;
+                    var tdHtml = '';  // Creamos una variable para guardar el HTML del <td>
+
+                        // Verificar si el rol es 3 para incluir o no la clase al <td>
+                            if ('{{ session('rol') }}' == 3) {
+                            tdHtml = '<td>' +
+                                        '<ul class="orderDatatable_actions mb-0 d-flex flex-wrap">' +
+                                            '<li>' +
+                                                '<a href="#" class="edit">' +
+                                                    '<i class="uil uil-edit" onclick="editar(\''+data+'\')"></i>' +
+                                                '</a>' +
+                                            '</li>' +
+                                            '<li>' +
+                                                '<a href="#" class="remove" onclick="borrar(\''+data2+'\')">' +
+                                                    '<i class="uil uil-trash-alt"></i>' +
+                                                '</a>' +
+                                            '</li>' +
+                                        '</ul>' +
+                                    '</td>';
+                            } else {
+                            tdHtml = '<td></td>';  // Si el rol no es 3, simplemente un <td> vacío
+                            }
+
                     var html =    '<tr>'
                                     +'<td>'
                                         +'<div class="d-flex">'
@@ -724,19 +746,7 @@
                                         +'</div>'
                                     +'</td>'
 
-                                    +'<td>'
-                                        +'<ul class="orderDatatable_actions mb-0 d-flex flex-wrap">'
-                                            +'<li>'
-                                                +'<a href="#" class="edit">'
-                                                +'<i class="uil uil-edit" onclick="editar(\''+data+'\')"></i>'                                                +'</a>'
-                                            +'</li>'
-                                            +'<li>'
-                                                +'<a href="#" class="remove" onclick="borrar(\''+data2+'\')">'
-                                                    +'<i class="uil uil-trash-alt"></i>'
-                                                +'</a>'
-                                            +'</li>'
-                                        +'</ul>'
-                                    +'</td>'
+                                    + tdHtml 
                                 +'</tr>';
 
                                 $(html).appendTo(tbody);
