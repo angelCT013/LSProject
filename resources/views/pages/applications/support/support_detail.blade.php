@@ -92,7 +92,7 @@
                         <div class="product-item">
                         <div class="product-item__image">
 
-                            <a href="#"><img class="card-img-top img-fluid" src="                            <a href="#"><img class="card-img-top img-fluid" src="https://www.pngall.com/wp-content/uploads/12/Restore-PNG-Pic.png" alt="digital-chair"></a>" alt="digital-chair"></a>
+                            <a href="#"><img class="card-img-top img-fluid" src="https://www.pngall.com/wp-content/uploads/12/Restore-PNG-Pic.png" alt="digital-chair"></a>
                         </div>
                         <div class="card-body px-20 pb-25 pt-25">
                             <div class="product-item__body text-capitalize">
