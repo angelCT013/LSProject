@@ -35,6 +35,16 @@
                 <li><a href="{{ route('user.table',app()->getLocale()) }}" class="{{ Request::is(app()->getLocale().'/applications/user/table') ? 'active':'' }}">{{ trans('menu.user-table') }}</a></li>
             </ul>
         </li>
+        <li class="has-child {{ Request::is(app()->getLocale().'/applications/support/*') ? 'open':'' }}">
+            <a href="#" class="{{ Request::is(app()->getLocale().'/applications/support/*') ? 'active':'' }}">
+                <span class="nav-icon uil uil-user"></span>
+                <span class="menu-text">{{ trans('menu.support-menu-title') }}</span>
+                <span class="toggle-icon"></span>
+            </a>
+            <ul>
+                <li><a class="{{ Request::is(app()->getLocale().'/applications/support/support-details') ? 'active':'' }}" href="{{ route('support.support_detail',app()->getLocale()) }}">{{ trans('menu.support-ticket-detail') }}</a></li>
+            </ul>
+        </li>
         @endif
     </ul>
 </div>
