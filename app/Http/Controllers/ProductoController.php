@@ -9,6 +9,7 @@ class ProductoController extends Controller
     public function addProducto(Request $request)
     {
         // Obtener los datos del formulario
+        dd($request->all());
         $nombre = $request->input('nombre');
         $numSerie = $request->input('numSerie');
         $status_id = $request->input('status_id');
