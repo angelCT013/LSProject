@@ -642,7 +642,7 @@
       <form action="{{ route('ecommerce.add_product', app()->getLocale()) }}" method="post">
 
                 @csrf
-                <input  class="form-control" type="text" name="nombre" id="idproducto2" placeholder="Nombre producto..." hidden>
+                <input  class="form-control" value="" type="hidden" name="nombre" id="idproducto2" >
 
             <button class="btn btn-primary btn-default btn-squared text-capitalize" type="submit">Eliminar Producto</button>
         </form>
@@ -824,8 +824,11 @@
          }
 
          function borrar(data2){
+            console.log(data2);
+
             var dataSplit = data2.split('||');
             idproducto2.value = dataSplit[0];
+
             tneditar.innerHTML = dataSplit[1];
             $(ModalEliminar).modal('show');
 
