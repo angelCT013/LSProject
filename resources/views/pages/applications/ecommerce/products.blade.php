@@ -642,7 +642,7 @@
       <form action="{{ route('ecommerce.add_product', app()->getLocale()) }}" method="post">
 
                 @csrf
-                <input  class="form-control" value="" type="hidden" name="nombre" id="idproducto2" >
+                <input  class="form-control" value="" type="hidden" name="idproducto_Del" id="idproducto_Del" >
 
             <button class="btn btn-primary btn-default btn-squared text-capitalize" type="submit">Eliminar Producto</button>
         </form>
@@ -695,17 +695,7 @@
                     var descripcion = valor.descripcion;
                     var modeloid = valor.modelo_id;
                     var cateogoriaid = valor.categoria_id;
-                    let dataObj={
-                        producto_id: producto_id,
-                        nombre: nombre,
-                        numSerie: numSerie,
-                        nmodelo: nmodelo,
-                        ncategoria: ncategoria,
-                        status: status,
-                        descripcion: descripcion,
-                        modeloid: modeloid,
-                        cateogoriaid: cateogoriaid,
-                        }
+                
                     var data = producto_id +'||'+ nombre +'||'+ numSerie +'||'+ nmodelo +'||'+ ncategoria +'||'+ status +'||'+ descripcion +'||'+modeloid+'||'+cateogoriaid;
                     var data2 = producto_id +'||'+ nombre;
                     var html =    '<tr>'
@@ -824,10 +814,13 @@
          }
 
          function borrar(data2){
-            console.log(data2);
+            // console.log(data2);
 
             var dataSplit = data2.split('||');
-            idproducto2.value = dataSplit[0];
+            // console.log(dataSplit);
+            // console.log(dataSplit[0]);
+
+            idproducto_Del.value = dataSplit[0];
 
             tneditar.innerHTML = dataSplit[1];
             $(ModalEliminar).modal('show');
