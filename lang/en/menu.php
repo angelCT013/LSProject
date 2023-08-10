@@ -25,7 +25,7 @@
 
         'support-menu-title'=>'Support',
         'support-ticket'=>'Support Ticket',
-        'support-ticket-detail'=>'Ticket Details',
+        'support-ticket-detail'=>'Database',
         'support-new-ticket'=>'New Ticket',
 
         'job-menu-title'=>'jobSearch',

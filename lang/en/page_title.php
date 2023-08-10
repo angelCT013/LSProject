@@ -22,7 +22,7 @@
         'changelog' => 'Changelog',
 
         'support_ticket' => 'All Support Ticket',
-        'ticket_detail' => 'Ticket Details',
+        'ticket_detail' => 'Database',
         'new_ticket'=>'New Ticket',
 
         'job_search' => 'Job Search',

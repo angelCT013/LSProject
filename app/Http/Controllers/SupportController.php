@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class SupportController extends Controller {
-    
+
     /**
      * Display support ticket of the resource.
      *
@@ -23,7 +23,7 @@ class SupportController extends Controller {
      * @return \Illuminate\View\View
      */
     public function detail(){
-        $title = "Support Ticket Details";
+        $title = "Database";
         $description = "Some description for the page";
         return view('pages.applications.support.support_detail',compact('title','description'));
     }
