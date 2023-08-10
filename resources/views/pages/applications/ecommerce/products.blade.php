@@ -779,7 +779,6 @@
 
                 var modelo_id = dataSplit[7];
 
-                // Obtén el elemento select por su id
                 var selectElement = document.getElementById("modelo_id");
 
                 // Recorre las opciones del select
@@ -790,12 +789,11 @@
                     if (option.value == modelo_id) {
                         // Establece la opción como seleccionada
                         option.selected = true;
-                        break; // Rompe el bucle una vez que encuentres la opción correcta
+                        break;
                     }
                 }
                 var categoria_id = dataSplit[8];
 
-                // Obtén el elemento select por su id
                 var selectElement = document.getElementById("categoria_id");
 
                 // Recorre las opciones del select
@@ -806,7 +804,7 @@
                     if (option.value == categoria_id) {
                         // Establece la opción como seleccionada
                         option.selected = true;
-                        break; // Rompe el bucle una vez que encuentres la opción correcta
+                        break;
                     }
                 }
 
