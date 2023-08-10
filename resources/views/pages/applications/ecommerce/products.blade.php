@@ -639,12 +639,12 @@
       </div>
       <div class="modal-body">
 
-      <form action="{{ route('ecommerce.add_product', app()->getLocale()) }}" method="post">
+      <form action="/Eliminar-Productos" method="post">
 
                 @csrf
                 <input  class="form-control" value="" type="hidden" name="idproducto_Del" id="idproducto_Del" >
 
-            <button class="btn btn-primary btn-default btn-squared text-capitalize" type="submit">Eliminar Producto</button>
+            <button class="btn btn-primary btn-default btn-squared text-capitalize" onclick="deleteProducto()" type="submit">Eliminar Producto</button>
         </form>
       </div>
 
@@ -831,6 +831,13 @@
         var ModalEnlazar = document.getElementById('ModalEnlazar');
         $(ModalEnlazar).modal('hide');
         }
+        // function deleteProducto(){
+        //     // console.log(data2);
+
+        //     var idProducto_del= document.getElementById('idproducto_Del').value;
+        //     console.log(idProducto_del);
+        //  }
+      
 
 
         </script>
