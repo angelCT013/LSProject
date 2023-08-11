@@ -15,6 +15,7 @@ return [
     |
     */
 
+    // 'default' => env('DB_CONNECTION', 'localshop'),
     'default' => env('DB_CONNECTION', 'localshop'),
 
     /*
