@@ -9,8 +9,8 @@ class BackupController extends Controller
 {
     public function backupDatabase($backupName)
     {
+        
         try {
-            $backupName = 'nombre_del_backup'; // El nombre del respaldo proporcionado por el usuario
             $backupPath = storage_path('app/backups/' . $backupName . '.sql');
 
             Artisan::call('backup:run', [

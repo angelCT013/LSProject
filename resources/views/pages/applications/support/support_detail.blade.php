@@ -199,6 +199,8 @@
 
                 $('#ModalBackup').modal('show');
                 $('#backupButton').on('click', function() {
+                 let backupName = databack.value;
+
                     console.log(databack.value);
 
                     $.ajax({

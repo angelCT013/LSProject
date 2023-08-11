@@ -7,6 +7,7 @@ use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\productosController;
 use App\Http\Controllers\usuariosController;
+use App\Http\Controllers\BackupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,10 @@ Route::post('/addProducto',[ProductoController::class,'addProducto'])->name('add
 Route::get('/obtener-productos',[productosController::class,'obtenerProductos']);
 Route::post('/Eliminar-Productos',[ProductoController::class,'delete']);
 Route::get('/obtener-usuarios',[usuariosController::class,'obtenerUsuarios']);
-Route::get('/backup-database/{backupName}', 'BackupController@backupDatabase')->name('backup.database');
+// Route::get('/backup-database/{backupName}',[BackupController::class,'backupDatabase']);
+Route::get('/backup-database/{backupName}', [BackupController::class,'backupDatabase'])->name('backup.database');
+// Route::get('/backup-database/{backupName}', 'BackupController@backupDatabase')->name('backup.database');
+
 
 
 
