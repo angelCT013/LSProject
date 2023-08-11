@@ -189,24 +189,27 @@
 
 
         <script type="text/javascript">
-
+            var databack = document.getElementById('backupi');
             function resetDB(){
                     console.log('resetDB');
             }
 
             function backupDB(){
-                $('#ModalBackup').modal('show');
 
-            $.ajax({
-                url: '/backup-database',
-                method: 'GET',
-                success: function(response) {
-                    alert(response.message);
-                },
-                error: function(error) {
-                    alert('Error al realizar el respaldo');
-                }
-            });
+                $('#ModalBackup').modal('show');
+                $('#backupButton').on('click', function() {
+                    console.log(databack.value);
+                    $.ajax({
+                        url: '/backup-database',
+                        method: 'GET',
+                        success: function(response) {
+                            alert(response.message);
+                        },
+                        error: function(error) {
+                            alert('Error al realizar el respaldo');
+                        }
+                    });
+                });
 
             }
 
