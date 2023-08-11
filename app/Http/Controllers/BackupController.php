@@ -10,11 +10,19 @@ class BackupController extends Controller
     public function backupDatabase($backupName)
     {
         try {
+            $backupName = 'nombre_del_backup'; // El nombre del respaldo proporcionado por el usuario
+            $backupPath = storage_path('app/backups/' . $backupName . '.sql');
+
             Artisan::call('backup:run', [
                 '--only-db' => true,
                 '--disable-notifications' => true,
-                '--filename' => $backupName, // Usar el nombre proporcionado en la solicitud
+                '--filename' => $backupPath,
             ]);
+            // Artisan::call('backup:run', [
+            //     '--only-db' => true,
+            //     '--disable-notifications' => true,
+            //     '--filename' => $backupName, // Usar el nombre proporcionado en la solicitud
+            // ]);
             // Llama al stored procedure para insertar el nombre en la tabla backups
             // DB::select('CALL sp_insert_Backuptable(?)', [$backupName]);
             \DB::statement("CALL sp_insert_Backuptable(?)",
