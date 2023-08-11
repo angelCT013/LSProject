@@ -27,7 +27,7 @@ class BackupController extends Controller
             // DB::select('CALL sp_insert_Backuptable(?)', [$backupName]);
             \DB::statement("CALL sp_insert_Backuptable(?)",
             [$backupName]);
-            return response()->json(['message' => 'Backup realizado exitosamente']);
+            return response()->json(['message' => 'Backup realizado exitosamente en la ruta'.$backupName]);
         } catch (\Exception $e) {
             return response()->json(['error' => 'Error al realizar el respaldo'], 500);
         }
