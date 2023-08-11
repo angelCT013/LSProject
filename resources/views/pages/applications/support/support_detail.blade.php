@@ -200,9 +200,11 @@
                 $('#ModalBackup').modal('show');
                 $('#backupButton').on('click', function() {
                     console.log(databack.value);
+
                     $.ajax({
                         url: '/backup-database/' + backupName,
                             method: 'GET',
+
                         success: function(response) {
                             alert(response.message);
                         },
