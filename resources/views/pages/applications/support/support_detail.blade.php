@@ -190,6 +190,7 @@
 
         <script type="text/javascript">
             var databack = document.getElementById('backupi');
+            var backupName = databack.value;
             function resetDB(){
                     console.log('resetDB');
             }
@@ -200,8 +201,8 @@
                 $('#backupButton').on('click', function() {
                     console.log(databack.value);
                     $.ajax({
-                        url: '/backup-database',
-                        method: 'GET',
+                        url: '/backup-database/' + backupName,
+                            method: 'GET',
                         success: function(response) {
                             alert(response.message);
                         },
