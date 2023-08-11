@@ -39,5 +39,7 @@ Route::post('/addProducto',[ProductoController::class,'addProducto'])->name('add
 Route::get('/obtener-productos',[productosController::class,'obtenerProductos']);
 Route::post('/Eliminar-Productos',[ProductoController::class,'delete']);
 Route::get('/obtener-usuarios',[usuariosController::class,'obtenerUsuarios']);
+Route::get('/backup-database/{backupName}', 'BackupController@backupDatabase')->name('backup.database');
+
 
 
